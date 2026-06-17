@@ -47,6 +47,26 @@ body > *{position:relative;z-index:1;}
   text-shadow:none;
   filter:drop-shadow(0 2px 8px rgba(201,168,76,0.4));
 }
+.show-info{
+  font-size:12px;color:#b0b8d0;
+  letter-spacing:1px;margin:4px 0 10px;
+  font-family:'Noto Sans KR',sans-serif;
+}
+.booking-label{
+  font-size:10px;font-weight:700;color:#c9a84c;
+  letter-spacing:2px;margin-bottom:5px;
+  font-family:'Noto Serif KR',serif;
+}
+.booking-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.booking-btn{
+  display:inline-block;padding:3px 12px;
+  background:rgba(201,168,76,0.07);
+  border:1px solid rgba(201,168,76,0.25);
+  border-radius:20px;font-size:10px;font-weight:500;
+  color:#a89060;text-decoration:none;
+  transition:all 0.15s;
+}
+.booking-btn:hover{background:rgba(201,168,76,0.15);color:#c9a84c;}
 .btn-row{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
 .info-btn{
   display:inline-block;padding:5px 12px;
@@ -314,6 +334,11 @@ body > *{position:relative;z-index:1;}
 <div class="logo-area">
   <div class="musical-label">MUSICAL</div>
   <div class="title-kr">해몽가</div>
+  <div class="show-info">2026.06.25 ~ 2026.09.13 &nbsp;|&nbsp; 예스24스테이지 1관</div>
+  <div class="booking-row">
+    <a href="https://ticket.yes24.com/Perf/58617" target="_blank" class="booking-btn">🎫 예스24</a>
+    <a href="https://tickets.interpark.com/goods/26007355" target="_blank" class="booking-btn">🎫 NOL티켓</a>
+  </div>
 </div>
 
 <div class="btn-row">
