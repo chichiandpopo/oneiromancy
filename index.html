@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/Administrator/Downloads/haemonga_1.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>해몽가 출연 일정</title>
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Noto Sans KR',sans-serif;
+  background:linear-gradient(180deg,#1a2a5e 0%,#1e3068 30%,#1a2860 70%,#141e50 100%);
+  min-height:100vh;
+  padding:20px 10px 40px;
+  color:#f0eadc;
+}
+
+/* 별 배경 효과 */
+body::before{
+  content:'';
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 20% 30%, rgba(255,255,220,0.8) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 60% 20%, rgba(255,255,220,0.6) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(255,255,220,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,220,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 15% 65%, rgba(255,255,220,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 90% 40%, rgba(255,255,220,0.6) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 50%, rgba(255,255,220,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 70% 85%, rgba(255,255,220,0.6) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 35% 15%, rgba(255,255,220,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 75% 10%, rgba(255,255,220,0.5) 0%, transparent 100%);
+  pointer-events:none;
+  z-index:0;
+}
+body > *{position:relative;z-index:1;}
+
+.logo-area{text-align:center;margin-bottom:10px;}
+.musical-label{font-size:11px;color:#c9a84c;letter-spacing:4px;font-weight:500;font-family:'Noto Serif KR',serif;}
+.title-kr{
+  font-size:36px;font-weight:700;
+  font-family:'Noto Serif KR',serif;
+  letter-spacing:6px;
+  background:linear-gradient(135deg,#e8c96a 0%,#f5e0a0 40%,#c9a84c 70%,#e8c96a 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin:4px 0 2px;
+  text-shadow:none;
+  filter:drop-shadow(0 2px 8px rgba(201,168,76,0.4));
+}
+.btn-row{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+.info-btn{
+  display:inline-block;padding:5px 12px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(201,168,76,0.4);
+  border-radius:20px;font-size:11px;font-weight:700;
+  color:#c9a84c;text-decoration:none;
+  transition:all 0.15s;
+}
+.info-btn:hover{background:rgba(201,168,76,0.15);}
+
+.section-title{
+  text-align:center;font-size:18px;font-weight:700;
+  font-family:'Noto Serif KR',serif;
+  color:#c9a84c;margin:12px 0 8px;letter-spacing:3px;
+}
+
+/* 고정 바 */
+.pin-bar{max-width:680px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;min-height:28px;}
+.pin-btn{padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;border:2px solid transparent;font-family:'Noto Sans KR',sans-serif;transition:all 0.15s;}
+.pin-btn-set{background:#c9a84c;color:#0a0f2e;border-color:#c9a84c;}
+.pin-btn-set:hover{background:#e8c96a;border-color:#e8c96a;}
+.pin-btn-clear{background:rgba(255,255,255,0.07);border-color:rgba(201,168,76,0.3)!important;color:#e87070;}
+.pin-status{font-size:11px;font-weight:700;color:#c9a84c;display:flex;align-items:center;gap:5px;}
+.pin-dot{width:8px;height:8px;border-radius:50%;background:#c9a84c;display:inline-block;animation:pblink 1.4s infinite;}
+@keyframes pblink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.fb2.pinned{outline:3px solid #c9a84c;outline-offset:1px;}
+
+/* 필터 */
+.filter-section{max-width:680px;margin:0 auto 8px;}
+.filter-group{margin-bottom:6px;}
+.fgl{font-size:10px;font-weight:700;color:#c9a84c;text-align:center;letter-spacing:2px;margin-bottom:3px;font-family:'Noto Serif KR',serif;}
+.filter-row{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;}
+.fb2{padding:4px 9px;border-radius:18px;font-size:10px;font-weight:700;cursor:pointer;border:2px solid transparent;transition:all 0.12s;font-family:'Noto Sans KR',sans-serif;white-space:nowrap;}
+
+/* 전체 */
+.btn-all{background:rgba(201,168,76,0.15);color:#c9a84c;border-color:rgba(201,168,76,0.4);}
+.btn-all.active{background:#c9a84c;color:#0a0f2e;border-color:#c9a84c;}
+
+/* 유견 - 따뜻한 계열 */
+.btn-jungmin{background:rgba(230,120,80,0.15);color:#e09060;border-color:rgba(230,120,80,0.4);}
+.btn-jungmin.active{background:#c06030;color:white;border-color:#c06030;}
+.btn-parkyuduk{background:rgba(180,100,200,0.15);color:#b070c0;border-color:rgba(180,100,200,0.4);}
+.btn-parkyuduk.active{background:#8040a0;color:white;border-color:#8040a0;}
+.btn-kimdobin{background:rgba(80,160,200,0.15);color:#60a8d0;border-color:rgba(80,160,200,0.4);}
+.btn-kimdobin.active{background:#2070a0;color:white;border-color:#2070a0;}
+.btn-hwangduhyun{background:rgba(80,180,120,0.15);color:#50b080;border-color:rgba(80,180,120,0.4);}
+.btn-hwangduhyun.active{background:#206040;color:white;border-color:#206040;}
+
+/* 이산 - 차가운 계열 */
+.btn-kimjieon{background:rgba(220,80,80,0.15);color:#d07070;border-color:rgba(220,80,80,0.4);}
+.btn-kimjieon.active{background:#a02020;color:white;border-color:#a02020;}
+.btn-yoonjaeho{background:rgba(100,140,220,0.15);color:#7090d0;border-color:rgba(100,140,220,0.4);}
+.btn-yoonjaeho.active{background:#304090;color:white;border-color:#304090;}
+.btn-yooneuno{background:rgba(200,160,80,0.15);color:#c0a040;border-color:rgba(200,160,80,0.4);}
+.btn-yooneuno.active{background:#806000;color:white;border-color:#806000;}
+.btn-hongseongwon{background:rgba(80,160,160,0.15);color:#50a0a0;border-color:rgba(80,160,160,0.4);}
+.btn-hongseongwon.active{background:#206060;color:white;border-color:#206060;}
+
+/* 행 배경 */
+.row.jungmin-row{background:rgba(230,120,80,0.07);}
+.row.parkyuduk-row{background:rgba(180,100,200,0.07);}
+.row.kimdobin-row{background:rgba(80,160,200,0.07);}
+.row.hwangduhyun-row{background:rgba(80,180,120,0.07);}
+
+.count-info{text-align:center;font-size:12px;color:#c9a84c;margin-bottom:10px;opacity:0.8;}
+
+/* 테이블 */
+.table-wrap{
+  max-width:680px;margin:0 auto;
+  background:rgba(255,255,255,0.10);
+  border-radius:16px;overflow:hidden;
+  border:1px solid rgba(201,168,76,0.35);
+}
+.table-header{
+  display:grid;grid-template-columns:60px 22px 36px 1fr 1fr 80px;
+  background:rgba(201,168,76,0.20);
+  padding:7px 5px;gap:2px;align-items:center;
+}
+.th{font-size:9.5px;font-weight:700;color:#c9a84c;text-align:center;letter-spacing:1px;}
+.row{
+  display:grid;grid-template-columns:60px 22px 36px 1fr 1fr 80px;
+  padding:5px 5px;gap:2px;
+  border-top:1px solid rgba(201,168,76,0.15);align-items:start;
+}
+.row.hidden{display:none;}
+.cell{font-size:10px;color:#e8e0d0;text-align:center;}
+.cell.date{font-weight:700;font-size:10px;text-align:left;line-height:1.3;color:#f5f0e8;}
+.day-sat{color:#80b0ff;font-weight:700;}
+.day-sun{color:#ff9080;font-weight:700;}
+.day-wkd{color:#b0bcc8;}
+
+.cell.time{font-size:9px;color:#a0b0c0;}
+
+/* 배우 태그 */
+.yukyon-tag{font-size:9.5px;font-weight:700;padding:1px 5px;border-radius:6px;display:inline-block;}
+.tag-jungmin{background:rgba(230,120,80,0.35);color:#ffb090;border:1px solid rgba(230,120,80,0.6);}
+.tag-parkyuduk{background:rgba(180,100,200,0.35);color:#d0a0f0;border:1px solid rgba(180,100,200,0.6);}
+.tag-kimdobin{background:rgba(80,160,200,0.35);color:#90d0f0;border:1px solid rgba(80,160,200,0.6);}
+.tag-hwangduhyun{background:rgba(80,180,120,0.35);color:#90e0b0;border:1px solid rgba(80,180,120,0.6);}
+.tag-kimjieon{background:rgba(220,80,80,0.35);color:#ffb0b0;border:1px solid rgba(220,80,80,0.6);}
+.tag-yoonjaeho{background:rgba(100,140,220,0.35);color:#a0c0f0;border:1px solid rgba(100,140,220,0.6);}
+.tag-yooneuno{background:rgba(200,160,80,0.35);color:#f0d080;border:1px solid rgba(200,160,80,0.6);}
+.tag-hongseongwon{background:rgba(80,160,160,0.35);color:#80e0e0;border:1px solid rgba(80,160,160,0.6);}
+
+.fb{display:inline-block;background:#c9a84c;color:#0a0f2e;font-size:7.5px;font-weight:700;padding:1px 4px;border-radius:10px;margin-left:2px;vertical-align:middle;}
+
+.month-divider{
+  padding:6px 8px;
+  background:rgba(201,168,76,0.20);
+  font-size:11px;font-weight:700;
+  font-family:'Noto Serif KR',serif;
+  color:#f0d890;text-align:center;
+  letter-spacing:3px;
+  border-top:1px solid rgba(201,168,76,0.3);
+}
+.no-show{
+  padding:5px 8px;
+  background:rgba(255,255,255,0.04);
+  font-size:10px;color:#7080a0;
+  text-align:center;
+  border-top:1px solid rgba(201,168,76,0.10);
+  font-style:italic;
+}
+
+/* 좌석 입력 */
+.seat-cell{display:flex;flex-direction:column;gap:2px;}
+.seat-input{
+  width:100%;font-size:9px;padding:2px 3px;
+  border:1px solid rgba(201,168,76,0.5);
+  border-radius:5px;
+  background:rgba(255,255,255,0.12);
+  color:#f0eadc;
+  font-family:'Noto Sans KR',sans-serif;text-align:center;
+}
+.seat-input:focus{outline:none;border-color:#c9a84c;background:rgba(201,168,76,0.15);}
+.seat-input::placeholder{color:#7080a0;}
+.seat-tags{display:flex;flex-wrap:wrap;gap:1px;justify-content:center;}
+.seat-tag{font-size:7.5px;font-weight:700;padding:1px 4px;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;gap:1px;color:white;}
+
+/* 카운팅 */
+.settle-title{
+  text-align:center;font-size:15px;font-weight:700;
+  font-family:'Noto Serif KR',serif;
+  color:#c9a84c;letter-spacing:2px;margin:20px 0 8px;
+}
+.counting-section{max-width:680px;margin:0 auto;}
+.cgl{font-size:10px;font-weight:700;color:#c9a84c;text-align:center;letter-spacing:2px;margin:6px 0 3px;font-family:'Noto Serif KR',serif;}
+.counting-box{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin-bottom:2px;}
+.count-card{
+  flex:1;min-width:55px;max-width:90px;
+  background:rgba(255,255,255,0.10);
+  border-radius:10px;padding:6px 3px;text-align:center;
+  border:1px solid rgba(201,168,76,0.3);
+}
+.count-card .cnt-name{font-size:9px;font-weight:700;margin-bottom:2px;}
+.count-card .cnt-num{font-size:20px;font-weight:700;line-height:1;}
+.count-card .cnt-label{font-size:8px;color:#8090b0;}
+.cnt-total-box{display:flex;justify-content:center;margin:4px 0;}
+.cnt-total-card{
+  background:rgba(201,168,76,0.1);
+  border-radius:12px;padding:6px 24px;text-align:center;
+  border:1px solid rgba(201,168,76,0.3);
+}
+.cnt-total-card .cnt-name{font-size:11px;font-weight:700;color:#c9a84c;margin-bottom:1px;font-family:'Noto Serif KR',serif;}
+.cnt-total-card .cnt-num{font-size:28px;font-weight:700;color:#c9a84c;line-height:1;}
+.cnt-total-card .cnt-label{font-size:10px;color:#8090a0;}
+
+/* 좌석 배치도 */
+.seat-map-section{
+  max-width:680px;margin:14px auto 0;
+  background:rgba(255,255,255,0.10);
+  border-radius:16px;padding:14px 8px 16px;
+  border:1px solid rgba(201,168,76,0.3);
+}
+.seat-map-title{text-align:center;font-size:13px;font-weight:700;color:#c9a84c;margin-bottom:8px;letter-spacing:2px;font-family:'Noto Serif KR',serif;}
+.stage-box{
+  background:rgba(201,168,76,0.12);
+  border:1px solid rgba(201,168,76,0.3);
+  border-radius:6px;text-align:center;
+  font-size:11px;font-weight:700;color:#c9a84c;
+  padding:5px 0;letter-spacing:4px;margin-bottom:6px;width:100%;
+  font-family:'Noto Serif KR',serif;
+}
+.floor-label{
+  font-size:9px;font-weight:700;color:#c9a84c;
+  text-align:left;padding:4px 0 2px;
+  letter-spacing:2px;opacity:0.7;
+}
+.seat-map-inner{display:block;width:100%;}
+.seat-row{display:flex;align-items:center;margin-bottom:1px;gap:1px;width:100%;}
+.row-label{font-size:8px;font-weight:700;color:#c9a84c;flex-shrink:0;text-align:center;opacity:0.7;}
+.seat-ph{flex-shrink:0;}
+.seat{
+  border-radius:2px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  background:rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.45);
+  border:1px solid rgba(255,255,255,0.18);
+}
+.seat.mk1{background:#ff6b9d!important;color:white!important;border-color:#c0004a!important;}
+.seat.mk2{background:#6b9dff!important;color:white!important;border-color:#003acc!important;}
+.seat.mk3{background:#ffa040!important;color:white!important;border-color:#c05000!important;}
+.seat.mk4{background:#a040ff!important;color:white!important;border-color:#6000c0!important;}
+.seat.mk5{background:#40c060!important;color:white!important;border-color:#006020!important;}
+.seat-legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;font-size:11px;}
+.seat-legend-item{display:flex;align-items:center;gap:4px;color:#d8d0c0;}
+.seat-legend-dot{width:10px;height:10px;border-radius:2px;display:inline-block;}
+.floor-divider{
+  border:none;border-top:1px dashed rgba(201,168,76,0.2);
+  margin:4px 0;
+}
+
+.footer{text-align:center;font-size:10px;color:#4a5a70;margin-top:14px;line-height:1.7;}
+
+/* 데이터 버튼 */
+.data-btn-row{max-width:680px;margin:10px auto 4px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;}
+.data-btn{
+  padding:5px 14px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(201,168,76,0.3);
+  border-radius:20px;font-size:11px;font-weight:700;
+  color:#c9a84c;cursor:pointer;font-family:inherit;
+  transition:all 0.15s;
+}
+.data-btn:hover{background:rgba(201,168,76,0.15);}
+
+@media(min-width:768px){
+  body{padding:36px 24px 60px;}
+  .title-kr{font-size:48px;letter-spacing:8px;}
+  .fb2{font-size:12px;padding:5px 14px;}
+  .fgl,.cgl{font-size:12px;}
+  .table-header{grid-template-columns:92px 36px 52px 1fr 1fr 110px;padding:10px 12px;gap:4px;}
+  .th{font-size:12px;}
+  .row{grid-template-columns:92px 36px 52px 1fr 1fr 110px;padding:8px 12px;gap:4px;}
+  .cell{font-size:12px;}.cell.date{font-size:12px;}.cell.time{font-size:11px;}
+  .yukyon-tag{font-size:12px;padding:2px 7px;}
+  .fb{font-size:10px;padding:2px 6px;}
+  .month-divider{font-size:13px;}
+  .no-show{font-size:12px;}
+  .seat-input{font-size:11px;padding:3px 5px;}
+  .count-card .cnt-name{font-size:11px;}.count-card .cnt-num{font-size:26px;}
+  .cnt-total-card .cnt-num{font-size:36px;}
+}
+</style>
+</head>
+<body>
+
+<div class="logo-area">
+  <div class="musical-label">MUSICAL</div>
+  <div class="title-kr">해몽가</div>
+</div>
+
+<div class="section-title">출연 일정</div>
+
+<div class="pin-bar" id="pinBar"><span class="pin-status"><span class="pin-dot"></span>📌 김지온 고정 중</span><button class="pin-btn pin-btn-clear" onclick="clearPin()">고정 해제</button></div>
+
+<div class="filter-section">
+  <div class="filter-group">
+    <div class="fgl">전체</div>
+    <div class="filter-row">
+      <button class="fb2 btn-all" onclick="resetFilter()">전체 보기</button>
+    </div>
+  </div>
+  <div class="filter-group">
+    <div class="fgl">유견</div>
+    <div class="filter-row">
+      <button class="fb2 btn-jungmin" onclick="toggleFilter(&#39;yukyon&#39;,&#39;jungmin&#39;)">정민</button>
+      <button class="fb2 btn-parkyuduk" onclick="toggleFilter(&#39;yukyon&#39;,&#39;parkyuduk&#39;)">박유덕</button>
+      <button class="fb2 btn-kimdobin" onclick="toggleFilter(&#39;yukyon&#39;,&#39;kimdobin&#39;)">김도빈</button>
+      <button class="fb2 btn-hwangduhyun" onclick="toggleFilter(&#39;yukyon&#39;,&#39;hwangduhyun&#39;)">황두현</button>
+    </div>
+  </div>
+  <div class="filter-group">
+    <div class="fgl">이산</div>
+    <div class="filter-row">
+      <button class="fb2 btn-kimjieon active pinned" onclick="toggleFilter(&#39;isan&#39;,&#39;kimjieon&#39;)">김지온</button>
+      <button class="fb2 btn-yoonjaeho" onclick="toggleFilter(&#39;isan&#39;,&#39;yoonjaeho&#39;)">윤재호</button>
+      <button class="fb2 btn-yooneuno" onclick="toggleFilter(&#39;isan&#39;,&#39;yooneuno&#39;)">윤은오</button>
+      <button class="fb2 btn-hongseongwon" onclick="toggleFilter(&#39;isan&#39;,&#39;hongseongwon&#39;)">홍성원</button>
+    </div>
+  </div>
+</div>
+
+<div class="count-info" id="countInfo">김지온 12회</div>
+
+<div class="table-wrap">
+  <div class="table-header">
+    <div class="th">날짜</div><div class="th">요일</div><div class="th">시간</div>
+    <div class="th">유견</div><div class="th">이산</div>
+    <div class="th">내 좌석</div>
+  </div>
+
+  <div class="month-divider" id="div-6">六月 · 6월</div>
+
+  <!-- s1: 6/25 목 20:00 정민 김지온 첫공 -->
+  <div class="row jungmin-row" data-type="jungmin" data-sid="s1" data-yukyon="jungmin" data-isan="kimjieon">
+    <div class="cell date">6월 25일</div><div class="cell day day-wkd">목</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민<span class="fb">첫공</span></span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온<span class="fb">첫공</span></span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s1" placeholder="A-1"><button onclick="confirmSeat(&#39;s1&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s1"><span class="seat-tag" style="background: rgb(107, 157, 255);">A-6 <span style="font-size:7px;opacity:0.8">×</span></span></div></div>
+  </div>
+
+  <!-- s2: 6/26 금 20:00 박유덕 윤재호 첫공 -->
+  <div class="row parkyuduk-row hidden" data-type="parkyuduk" data-sid="s2" data-yukyon="parkyuduk" data-isan="yoonjaeho">
+    <div class="cell date">6월 26일</div><div class="cell day day-wkd">금</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕<span class="fb">첫공</span></span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호<span class="fb">첫공</span></span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s2" placeholder="A-1"><button onclick="confirmSeat(&#39;s2&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s2"></div></div>
+  </div>
+
+  <!-- s3: 6/27 토 15:00 정민 김지온 -->
+  <div class="row jungmin-row" data-type="jungmin" data-sid="s3" data-yukyon="jungmin" data-isan="kimjieon">
+    <div class="cell date">6월 27일</div><div class="cell day day-sat">토</div><div class="cell time">15:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s3" placeholder="A-1"><button onclick="confirmSeat(&#39;s3&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s3"><span class="seat-tag" style="background: rgb(107, 157, 255);">A-6 <span style="font-size:7px;opacity:0.8">×</span></span></div></div>
+  </div>
+
+  <!-- s4: 6/27 토 19:00 김도빈 윤은오 첫공 -->
+  <div class="row kimdobin-row hidden" data-type="kimdobin" data-sid="s4" data-yukyon="kimdobin" data-isan="yooneuno">
+    <div class="cell date">6월 27일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈<span class="fb">첫공</span></span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오<span class="fb">첫공</span></span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s4" placeholder="A-1"><button onclick="confirmSeat(&#39;s4&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s4"></div></div>
+  </div>
+
+  <!-- s5: 6/28 일 14:00 황두현 홍성원 첫공 -->
+  <div class="row hwangduhyun-row hidden" data-type="hwangduhyun" data-sid="s5" data-yukyon="hwangduhyun" data-isan="hongseongwon">
+    <div class="cell date">6월 28일</div><div class="cell day day-sun">일</div><div class="cell time">14:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현<span class="fb">첫공</span></span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원<span class="fb">첫공</span></span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s5" placeholder="A-1"><button onclick="confirmSeat(&#39;s5&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s5"></div></div>
+  </div>
+
+  <!-- s6: 6/28 일 18:00 박유덕 윤재호 -->
+  <div class="row parkyuduk-row hidden" data-type="parkyuduk" data-sid="s6" data-yukyon="parkyuduk" data-isan="yoonjaeho">
+    <div class="cell date">6월 28일</div><div class="cell day day-sun">일</div><div class="cell time">18:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s6" placeholder="A-1"><button onclick="confirmSeat(&#39;s6&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s6"></div></div>
+  </div>
+
+  <div class="no-show" data-noshow="1" style="display: none;">6월 29일 (월) — 공연 없음</div>
+
+  <!-- s7: 6/30 화 20:00 정민 김지온 -->
+  <div class="row jungmin-row" data-type="jungmin" data-sid="s7" data-yukyon="jungmin" data-isan="kimjieon">
+    <div class="cell date">6월 30일</div><div class="cell day day-wkd">화</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s7" placeholder="A-1"><button onclick="confirmSeat(&#39;s7&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s7"></div></div>
+  </div>
+
+  <div class="month-divider" id="div-7">七月 · 7월</div>
+
+  <!-- s8: 7/1 수 16:00 김도빈 윤재호 -->
+  <div class="row kimdobin-row hidden" data-type="kimdobin" data-sid="s8" data-yukyon="kimdobin" data-isan="yoonjaeho">
+    <div class="cell date">7월 1일</div><div class="cell day day-wkd">수</div><div class="cell time">16:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s8" placeholder="A-1"><button onclick="confirmSeat(&#39;s8&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s8"></div></div>
+  </div>
+
+  <!-- s9: 7/1 수 20:00 황두현 윤은오 -->
+  <div class="row hwangduhyun-row hidden" data-type="hwangduhyun" data-sid="s9" data-yukyon="hwangduhyun" data-isan="yooneuno">
+    <div class="cell date">7월 1일</div><div class="cell day day-wkd">수</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s9" placeholder="A-1"><button onclick="confirmSeat(&#39;s9&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s9"></div></div>
+  </div>
+
+  <!-- s10: 7/2 목 20:00 김도빈 홍성원 -->
+  <div class="row kimdobin-row hidden" data-type="kimdobin" data-sid="s10" data-yukyon="kimdobin" data-isan="hongseongwon">
+    <div class="cell date">7월 2일</div><div class="cell day day-wkd">목</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈</span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s10" placeholder="A-1"><button onclick="confirmSeat(&#39;s10&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s10"></div></div>
+  </div>
+
+  <!-- s11: 7/3 금 20:00 박유덕 김지온 -->
+  <div class="row parkyuduk-row" data-type="parkyuduk" data-sid="s11" data-yukyon="parkyuduk" data-isan="kimjieon">
+    <div class="cell date">7월 3일</div><div class="cell day day-wkd">금</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s11" placeholder="A-1"><button onclick="confirmSeat(&#39;s11&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s11"></div></div>
+  </div>
+
+  <!-- s12: 7/4 토 15:00 황두현 윤재호 -->
+  <div class="row hwangduhyun-row hidden" data-type="hwangduhyun" data-sid="s12" data-yukyon="hwangduhyun" data-isan="yoonjaeho">
+    <div class="cell date">7월 4일</div><div class="cell day day-sat">토</div><div class="cell time">15:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s12" placeholder="A-1"><button onclick="confirmSeat(&#39;s12&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s12"></div></div>
+  </div>
+
+  <!-- s13: 7/4 토 19:00 황두현 김지온 -->
+  <div class="row hwangduhyun-row" data-type="hwangduhyun" data-sid="s13" data-yukyon="hwangduhyun" data-isan="kimjieon">
+    <div class="cell date">7월 4일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s13" placeholder="A-1"><button onclick="confirmSeat(&#39;s13&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s13"></div></div>
+  </div>
+
+  <!-- s14: 7/5 일 14:00 박유덕 윤은오 -->
+  <div class="row parkyuduk-row hidden" data-type="parkyuduk" data-sid="s14" data-yukyon="parkyuduk" data-isan="yooneuno">
+    <div class="cell date">7월 5일</div><div class="cell day day-sun">일</div><div class="cell time">14:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s14" placeholder="A-1"><button onclick="confirmSeat(&#39;s14&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s14"></div></div>
+  </div>
+
+  <!-- s15: 7/5 일 18:00 정민 홍성원 -->
+  <div class="row jungmin-row hidden" data-type="jungmin" data-sid="s15" data-yukyon="jungmin" data-isan="hongseongwon">
+    <div class="cell date">7월 5일</div><div class="cell day day-sun">일</div><div class="cell time">18:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s15" placeholder="A-1"><button onclick="confirmSeat(&#39;s15&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s15"></div></div>
+  </div>
+
+  <div class="no-show" data-noshow="1" style="display: none;">7월 6일 (월) — 공연 없음</div>
+
+  <!-- s16: 7/7 화 20:00 정민 윤은오 -->
+  <div class="row jungmin-row hidden" data-type="jungmin" data-sid="s16" data-yukyon="jungmin" data-isan="yooneuno">
+    <div class="cell date">7월 7일</div><div class="cell day day-wkd">화</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s16" placeholder="A-1"><button onclick="confirmSeat(&#39;s16&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s16"></div></div>
+  </div>
+
+  <!-- s17: 7/8 수 16:00 박유덕 김지온 -->
+  <div class="row parkyuduk-row" data-type="parkyuduk" data-sid="s17" data-yukyon="parkyuduk" data-isan="kimjieon">
+    <div class="cell date">7월 8일</div><div class="cell day day-wkd">수</div><div class="cell time">16:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s17" placeholder="A-1"><button onclick="confirmSeat(&#39;s17&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s17"></div></div>
+  </div>
+
+  <!-- s18: 7/8 수 20:00 황두현 윤재호 -->
+  <div class="row hwangduhyun-row hidden" data-type="hwangduhyun" data-sid="s18" data-yukyon="hwangduhyun" data-isan="yoonjaeho">
+    <div class="cell date">7월 8일</div><div class="cell day day-wkd">수</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s18" placeholder="A-1"><button onclick="confirmSeat(&#39;s18&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s18"></div></div>
+  </div>
+
+  <!-- s19: 7/9 목 20:00 김도빈 윤은오 -->
+  <div class="row kimdobin-row hidden" data-type="kimdobin" data-sid="s19" data-yukyon="kimdobin" data-isan="yooneuno">
+    <div class="cell date">7월 9일</div><div class="cell day day-wkd">목</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s19" placeholder="A-1"><button onclick="confirmSeat(&#39;s19&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s19"></div></div>
+  </div>
+
+  <!-- s20: 7/10 금 20:00 박유덕 홍성원 -->
+  <div class="row parkyuduk-row hidden" data-type="parkyuduk" data-sid="s20" data-yukyon="parkyuduk" data-isan="hongseongwon">
+    <div class="cell date">7월 10일</div><div class="cell day day-wkd">금</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s20" placeholder="A-1"><button onclick="confirmSeat(&#39;s20&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s20"></div></div>
+  </div>
+
+  <!-- s21: 7/11 토 15:00 김도빈 김지온 -->
+  <div class="row kimdobin-row" data-type="kimdobin" data-sid="s21" data-yukyon="kimdobin" data-isan="kimjieon">
+    <div class="cell date">7월 11일</div><div class="cell day day-sat">토</div><div class="cell time">15:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s21" placeholder="A-1"><button onclick="confirmSeat(&#39;s21&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s21"></div></div>
+  </div>
+
+  <!-- s22: 7/11 토 19:00 박유덕 윤은오 -->
+  <div class="row parkyuduk-row hidden" data-type="parkyuduk" data-sid="s22" data-yukyon="parkyuduk" data-isan="yooneuno">
+    <div class="cell date">7월 11일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s22" placeholder="A-1"><button onclick="confirmSeat(&#39;s22&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s22"></div></div>
+  </div>
+
+  <!-- s23: 7/12 일 14:00 황두현 홍성원 -->
+  <div class="row hwangduhyun-row hidden" data-type="hwangduhyun" data-sid="s23" data-yukyon="hwangduhyun" data-isan="hongseongwon">
+    <div class="cell date">7월 12일</div><div class="cell day day-sun">일</div><div class="cell time">14:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s23" placeholder="A-1"><button onclick="confirmSeat(&#39;s23&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s23"></div></div>
+  </div>
+
+  <!-- s24: 7/12 일 18:00 정민 윤재호 -->
+  <div class="row jungmin-row hidden" data-type="jungmin" data-sid="s24" data-yukyon="jungmin" data-isan="yoonjaeho">
+    <div class="cell date">7월 12일</div><div class="cell day day-sun">일</div><div class="cell time">18:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s24" placeholder="A-1"><button onclick="confirmSeat(&#39;s24&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s24"></div></div>
+  </div>
+
+  <div class="no-show" data-noshow="1" style="display: none;">7월 13일 (월) — 공연 없음</div>
+
+  <!-- s25: 7/14 화 20:00 박유덕 윤재호 -->
+  <div class="row parkyuduk-row hidden" data-type="parkyuduk" data-sid="s25" data-yukyon="parkyuduk" data-isan="yoonjaeho">
+    <div class="cell date">7월 14일</div><div class="cell day day-wkd">화</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s25" placeholder="A-1"><button onclick="confirmSeat(&#39;s25&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s25"></div></div>
+  </div>
+
+  <!-- s26: 7/15 수 16:00 황두현 윤은오 -->
+  <div class="row hwangduhyun-row hidden" data-type="hwangduhyun" data-sid="s26" data-yukyon="hwangduhyun" data-isan="yooneuno">
+    <div class="cell date">7월 15일</div><div class="cell day day-wkd">수</div><div class="cell time">16:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s26" placeholder="A-1"><button onclick="confirmSeat(&#39;s26&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s26"></div></div>
+  </div>
+
+  <!-- s27: 7/15 수 20:00 정민 김지온 -->
+  <div class="row jungmin-row" data-type="jungmin" data-sid="s27" data-yukyon="jungmin" data-isan="kimjieon">
+    <div class="cell date">7월 15일</div><div class="cell day day-wkd">수</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s27" placeholder="A-1"><button onclick="confirmSeat(&#39;s27&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s27"></div></div>
+  </div>
+
+  <!-- s28: 7/16 목 20:00 황두현 윤재호 -->
+  <div class="row hwangduhyun-row hidden" data-type="hwangduhyun" data-sid="s28" data-yukyon="hwangduhyun" data-isan="yoonjaeho">
+    <div class="cell date">7월 16일</div><div class="cell day day-wkd">목</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s28" placeholder="A-1"><button onclick="confirmSeat(&#39;s28&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s28"></div></div>
+  </div>
+
+  <!-- s29: 7/17 금 14:00 김도빈 홍성원 -->
+  <div class="row kimdobin-row hidden" data-type="kimdobin" data-sid="s29" data-yukyon="kimdobin" data-isan="hongseongwon">
+    <div class="cell date">7월 17일</div><div class="cell day day-wkd">금</div><div class="cell time">14:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈</span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s29" placeholder="A-1"><button onclick="confirmSeat(&#39;s29&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s29"></div></div>
+  </div>
+
+  <!-- s30: 7/17 금 18:00 김도빈 윤재호 -->
+  <div class="row kimdobin-row hidden" data-type="kimdobin" data-sid="s30" data-yukyon="kimdobin" data-isan="yoonjaeho">
+    <div class="cell date">7월 17일</div><div class="cell day day-wkd">금</div><div class="cell time">18:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s30" placeholder="A-1"><button onclick="confirmSeat(&#39;s30&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s30"></div></div>
+  </div>
+
+  <!-- s31: 7/18 토 15:00 박유덕 홍성원 -->
+  <div class="row parkyuduk-row hidden" data-type="parkyuduk" data-sid="s31" data-yukyon="parkyuduk" data-isan="hongseongwon">
+    <div class="cell date">7월 18일</div><div class="cell day day-sat">토</div><div class="cell time">15:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s31" placeholder="A-1"><button onclick="confirmSeat(&#39;s31&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s31"></div></div>
+  </div>
+
+  <!-- s32: 7/18 토 19:00 정민 홍성원 -->
+  <div class="row jungmin-row hidden" data-type="jungmin" data-sid="s32" data-yukyon="jungmin" data-isan="hongseongwon">
+    <div class="cell date">7월 18일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s32" placeholder="A-1"><button onclick="confirmSeat(&#39;s32&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s32"></div></div>
+  </div>
+
+  <!-- s33: 7/19 일 14:00 김도빈 윤은오 -->
+  <div class="row kimdobin-row hidden" data-type="kimdobin" data-sid="s33" data-yukyon="kimdobin" data-isan="yooneuno">
+    <div class="cell date">7월 19일</div><div class="cell day day-sun">일</div><div class="cell time">14:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s33" placeholder="A-1"><button onclick="confirmSeat(&#39;s33&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s33"></div></div>
+  </div>
+
+  <!-- s34: 7/19 일 18:00 황두현 김지온 -->
+  <div class="row hwangduhyun-row" data-type="hwangduhyun" data-sid="s34" data-yukyon="hwangduhyun" data-isan="kimjieon">
+    <div class="cell date">7월 19일</div><div class="cell day day-sun">일</div><div class="cell time">18:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s34" placeholder="A-1"><button onclick="confirmSeat(&#39;s34&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s34"></div></div>
+  </div>
+
+  <div class="no-show" data-noshow="1" style="display: none;">7월 20일 (월) — 공연 없음</div>
+
+  <!-- s35: 7/21 화 20:00 김도빈 김지온 -->
+  <div class="row kimdobin-row" data-type="kimdobin" data-sid="s35" data-yukyon="kimdobin" data-isan="kimjieon">
+    <div class="cell date">7월 21일</div><div class="cell day day-wkd">화</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s35" placeholder="A-1"><button onclick="confirmSeat(&#39;s35&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s35"></div></div>
+  </div>
+
+  <!-- s36: 7/22 수 16:00 황두현 윤재호 -->
+  <div class="row hwangduhyun-row hidden" data-type="hwangduhyun" data-sid="s36" data-yukyon="hwangduhyun" data-isan="yoonjaeho">
+    <div class="cell date">7월 22일</div><div class="cell day day-wkd">수</div><div class="cell time">16:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s36" placeholder="A-1"><button onclick="confirmSeat(&#39;s36&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s36"></div></div>
+  </div>
+
+  <!-- s37: 7/22 수 20:00 정민 윤은오 -->
+  <div class="row jungmin-row hidden" data-type="jungmin" data-sid="s37" data-yukyon="jungmin" data-isan="yooneuno">
+    <div class="cell date">7월 22일</div><div class="cell day day-wkd">수</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s37" placeholder="A-1"><button onclick="confirmSeat(&#39;s37&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s37"></div></div>
+  </div>
+
+  <!-- s38: 7/23 목 20:00 박유덕 김지온 -->
+  <div class="row parkyuduk-row" data-type="parkyuduk" data-sid="s38" data-yukyon="parkyuduk" data-isan="kimjieon">
+    <div class="cell date">7월 23일</div><div class="cell day day-wkd">목</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s38" placeholder="A-1"><button onclick="confirmSeat(&#39;s38&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s38"></div></div>
+  </div>
+
+  <!-- s39: 7/24 금 20:00 정민 홍성원 -->
+  <div class="row jungmin-row hidden" data-type="jungmin" data-sid="s39" data-yukyon="jungmin" data-isan="hongseongwon">
+    <div class="cell date">7월 24일</div><div class="cell day day-wkd">금</div><div class="cell time">20:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s39" placeholder="A-1"><button onclick="confirmSeat(&#39;s39&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s39"></div></div>
+  </div>
+
+  <!-- s40: 7/25 토 15:00 김도빈 김지온 -->
+  <div class="row kimdobin-row" data-type="kimdobin" data-sid="s40" data-yukyon="kimdobin" data-isan="kimjieon">
+    <div class="cell date">7월 25일</div><div class="cell day day-sat">토</div><div class="cell time">15:00</div>
+    <div class="cell"><span class="yukyon-tag tag-kimdobin">김도빈</span></div>
+    <div class="cell"><span class="yukyon-tag tag-kimjieon">김지온</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s40" placeholder="A-1"><button onclick="confirmSeat(&#39;s40&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s40"></div></div>
+  </div>
+
+  <!-- s41: 7/25 토 19:00 정민 윤재호 -->
+  <div class="row jungmin-row hidden" data-type="jungmin" data-sid="s41" data-yukyon="jungmin" data-isan="yoonjaeho">
+    <div class="cell date">7월 25일</div><div class="cell day day-sat">토</div><div class="cell time">19:00</div>
+    <div class="cell"><span class="yukyon-tag tag-jungmin">정민</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yoonjaeho">윤재호</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s41" placeholder="A-1"><button onclick="confirmSeat(&#39;s41&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s41"></div></div>
+  </div>
+
+  <!-- s42: 7/26 일 14:00 박유덕 윤은오 -->
+  <div class="row parkyuduk-row hidden" data-type="parkyuduk" data-sid="s42" data-yukyon="parkyuduk" data-isan="yooneuno">
+    <div class="cell date">7월 26일</div><div class="cell day day-sun">일</div><div class="cell time">14:00</div>
+    <div class="cell"><span class="yukyon-tag tag-parkyuduk">박유덕</span></div>
+    <div class="cell"><span class="yukyon-tag tag-yooneuno">윤은오</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s42" placeholder="A-1"><button onclick="confirmSeat(&#39;s42&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s42"></div></div>
+  </div>
+
+  <!-- s43: 7/26 일 18:00 황두현 홍성원 -->
+  <div class="row hwangduhyun-row hidden" data-type="hwangduhyun" data-sid="s43" data-yukyon="hwangduhyun" data-isan="hongseongwon">
+    <div class="cell date">7월 26일</div><div class="cell day day-sun">일</div><div class="cell time">18:00</div>
+    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
+    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
+    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s43" placeholder="A-1"><button onclick="confirmSeat(&#39;s43&#39;)" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s43"></div></div>
+  </div>
+
+</div><!-- /table-wrap -->
+
+<!-- 카운팅 -->
+<div class="settle-title">✨ 2026 해몽가 정산 ✨</div>
+<div class="counting-section">
+  <div class="cgl">유견</div>
+  <div class="counting-box">
+    <div class="count-card"><div class="cnt-name" style="color:#e09060;">정민</div><div class="cnt-num" style="color:#e09060;" id="cnt-jungmin">4</div><div class="cnt-label">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#c090e0;">박유덕</div><div class="cnt-num" style="color:#c090e0;" id="cnt-parkyuduk">0</div><div class="cnt-label">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#80c0e0;">김도빈</div><div class="cnt-num" style="color:#80c0e0;" id="cnt-kimdobin">0</div><div class="cnt-label">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#70c090;">황두현</div><div class="cnt-num" style="color:#70c090;" id="cnt-hwangduhyun">0</div><div class="cnt-label">회</div></div>
+  </div>
+  <div class="cgl">이산</div>
+  <div class="counting-box">
+    <div class="count-card"><div class="cnt-name" style="color:#e08080;">김지온</div><div class="cnt-num" style="color:#e08080;" id="cnt-kimjieon">2</div><div class="cnt-label">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#90b0e0;">윤재호</div><div class="cnt-num" style="color:#90b0e0;" id="cnt-yoonjaeho">0</div><div class="cnt-label">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#d0b060;">윤은오</div><div class="cnt-num" style="color:#d0b060;" id="cnt-yooneuno">0</div><div class="cnt-label">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#70c0c0;">홍성원</div><div class="cnt-num" style="color:#70c0c0;" id="cnt-hongseongwon">0</div><div class="cnt-label">회</div></div>
+  </div>
+  <div class="cnt-total-box">
+    <div class="cnt-total-card">
+      <div class="cnt-name">합계</div>
+      <div class="cnt-num" id="cnt-total">2</div>
+      <div class="cnt-label">회 관람</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 좌석 배치도 -->
+<div class="seat-map-section">
+  <div class="seat-map-title">🏮 내 좌석 현황</div>
+  <div class="stage-box">무 대</div>
+  <div class="seat-map-inner" id="seatMapInner"><div class="floor-label">1층</div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">A</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-A-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-A-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-A-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-A-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 74px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-A-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat mk2" id="S-A-6" title="A-6 (2회 관람)" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-A-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-A-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-A-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-A-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-A-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-A-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-A-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-A-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-A-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div></div><div style="flex-shrink: 0; width: 74px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-A-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div><div class="seat" id="S-A-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-A-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">A</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">B</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-B-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-B-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-B-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-B-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-B-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-B-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-B-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-B-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-B-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-B-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-B-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-B-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-B-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-B-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-B-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-B-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-B-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-B-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-B-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">B</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">C</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-C-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-C-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-C-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-C-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-C-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-C-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-C-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-C-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-C-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-C-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-C-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-C-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-C-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-C-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-C-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-C-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div><div class="seat" id="S-C-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-C-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-C-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">C</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">D</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-D-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-D-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-D-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-D-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-D-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-D-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-D-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-D-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-D-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-D-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-D-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-D-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-D-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-D-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-D-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-D-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-D-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-D-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-D-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">D</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">E</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-E-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-E-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-E-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-E-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-E-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-E-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-E-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-E-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-E-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-E-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-E-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-E-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-E-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-E-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-E-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-E-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div><div class="seat" id="S-E-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-E-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-E-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">E</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">F</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-F-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-F-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-F-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-F-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-F-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-F-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-F-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-F-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-F-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-F-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-F-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-F-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-F-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-F-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-F-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-F-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-F-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-F-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-F-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div><div class="seat" id="S-F-20" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">20</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">F</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">G</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-G-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-G-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-G-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-G-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-G-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-G-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-G-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-G-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-G-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-G-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-G-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-G-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-G-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-G-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-G-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-G-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div><div class="seat" id="S-G-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-G-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-G-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">G</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">H</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-H-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-H-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-H-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-H-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-H-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-H-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-H-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-H-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-H-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-H-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-H-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-H-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-H-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-H-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-H-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-H-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-H-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-H-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-H-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div><div class="seat" id="S-H-20" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">20</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">H</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">I</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-I-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-I-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-I-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-I-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-I-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-I-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-I-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-I-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-I-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-I-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-I-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-I-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-I-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-I-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-I-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-I-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-I-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-I-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-I-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div><div class="seat" id="S-I-20" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">20</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">I</div></div><div style="height: 10px;"></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">J</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-J-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-J-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-J-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-J-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-J-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-J-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-J-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-J-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-J-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-J-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-J-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-J-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-J-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-J-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-J-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-J-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-J-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-J-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-J-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">J</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">K</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-K-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-K-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-K-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-K-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-K-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-K-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-K-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-K-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-K-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-K-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-K-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-K-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-K-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-K-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-K-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-K-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-K-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-K-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-K-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div><div class="seat" id="S-K-20" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">20</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">K</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">L</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-L-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-L-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-L-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-L-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-L-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-L-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-L-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-L-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-L-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-L-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-L-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-L-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-L-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-L-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-L-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-L-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 48px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-L-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-L-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-L-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div><div class="seat" id="S-L-20" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">20</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">L</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">M</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-M-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-M-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-M-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-M-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-M-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-M-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-M-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-M-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-M-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-M-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-M-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-M-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-M-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-M-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-M-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-M-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 61px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-M-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-M-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-M-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">M</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">N</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-N-1" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-N-2" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-N-3" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-N-4" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">4</div><div class="seat" id="S-N-5" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-N-6" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">6</div></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-N-7" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-N-8" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-N-9" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-N-10" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-N-11" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-N-12" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-N-13" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-N-14" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-N-15" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-N-16" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div><div style="flex-shrink: 0; width: 70px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-N-17" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-N-18" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-N-19" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">19</div><div class="seat" id="S-N-20" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">20</div><div class="seat" id="S-N-21" style="width: 25px; height: 25px; font-size: 11px; flex-shrink: 0; margin: 0px 0.5px;">21</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">N</div></div><hr class="floor-divider"><div class="floor-label">2층</div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">O</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="flex-shrink: 0; width: 29px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-O-1" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-O-2" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-O-3" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-O-4" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">4</div><div class="seat" id="S-O-5" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-O-6" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-O-7" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-O-8" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-O-9" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-O-10" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-O-11" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-O-12" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-O-13" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-O-14" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-O-15" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-O-16" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">16</div><div class="seat" id="S-O-17" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-O-18" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-O-19" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">19</div><div class="seat" id="S-O-20" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">20</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">O</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">P</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="flex-shrink: 0; width: 0px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-P-1" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-P-2" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-P-3" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-P-4" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">4</div><div class="seat" id="S-P-5" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-P-6" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-P-7" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-P-8" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-P-9" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-P-10" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-P-11" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-P-12" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-P-13" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-P-14" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-P-15" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-P-16" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">16</div><div class="seat" id="S-P-17" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-P-18" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">18</div><div class="seat" id="S-P-19" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">19</div><div class="seat" id="S-P-20" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">20</div><div class="seat" id="S-P-21" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">21</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">P</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">Q</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="flex-shrink: 0; width: 29px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-Q-1" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-Q-2" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-Q-3" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-Q-4" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">4</div><div class="seat" id="S-Q-5" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-Q-6" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-Q-7" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-Q-8" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-Q-9" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-Q-10" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-Q-11" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-Q-12" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-Q-13" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-Q-14" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-Q-15" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-Q-16" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">Q</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">R</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="flex-shrink: 0; width: 29px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-R-1" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-R-2" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-R-3" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-R-4" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">4</div><div class="seat" id="S-R-5" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-R-6" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-R-7" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-R-8" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-R-9" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-R-10" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-R-11" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-R-12" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-R-13" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-R-14" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-R-15" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-R-16" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">R</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">S</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="flex-shrink: 0; width: 29px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-S-1" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-S-2" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-S-3" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-S-4" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">4</div><div class="seat" id="S-S-5" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-S-6" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-S-7" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-S-8" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-S-9" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-S-10" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-S-11" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-S-12" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-S-13" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-S-14" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-S-15" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-S-16" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">16</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">S</div></div><div style="display: flex; align-items: center; margin-bottom: 1px; width: 100%;"><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">T</div><div style="display: flex; align-items: center; flex: 1 1 0%; min-width: 0px;"><div style="flex-shrink: 0; width: 29px;"></div><div style="display: flex; flex-shrink: 0;"><div class="seat" id="S-T-1" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">1</div><div class="seat" id="S-T-2" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">2</div><div class="seat" id="S-T-3" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">3</div><div class="seat" id="S-T-4" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">4</div><div class="seat" id="S-T-5" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">5</div><div class="seat" id="S-T-6" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">6</div><div class="seat" id="S-T-7" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">7</div><div class="seat" id="S-T-8" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">8</div><div class="seat" id="S-T-9" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">9</div><div class="seat" id="S-T-10" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">10</div><div class="seat" id="S-T-11" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">11</div><div class="seat" id="S-T-12" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">12</div><div class="seat" id="S-T-13" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">13</div><div class="seat" id="S-T-14" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">14</div><div class="seat" id="S-T-15" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">15</div><div class="seat" id="S-T-16" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">16</div><div class="seat" id="S-T-17" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">17</div><div class="seat" id="S-T-18" style="width: 28px; height: 28px; font-size: 12px; flex-shrink: 0; margin: 0px 0.5px;">18</div></div></div><div class="row-label" style="width: 15px; min-width: 15px; flex-shrink: 0; font-size: 9px; text-align: center;">T</div></div></div>
+  <div class="seat-legend" id="seatLegend"><div class="seat-legend-item"><div class="seat-legend-dot" style="background:#ff6b9d;border:1px solid #c0004a"></div>1회</div><div class="seat-legend-item"><div class="seat-legend-dot" style="background:#6b9dff;border:1px solid #003acc"></div>2회</div></div>
+</div>
+
+<div class="footer" style="max-width:680px;margin:14px auto 0;">
+  ※ 상기 공연 스케줄은 배우 및 제작사의 사정에 의해 사전 공지 없이 변경될 수 있습니다.
+</div>
+
+<div class="data-btn-row">
+  <button onclick="exportData()" class="data-btn">💾 내 데이터 저장</button>
+  <label class="data-btn" style="cursor:pointer;">
+    📂 데이터 불러오기<input type="file" accept=".json" onchange="importData(event)" style="display:none;">
+  </label>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════
+// 좌석 데이터
+// 각 행: { left, center, right } 세 블럭으로 분리
+// null = 해당 블럭 없음
+// 'AISLE' = I/J 사이 통로 행
+// ══════════════════════════════════════════════════════
+const SEATS_1F = [
+  // row,  left(1~),       center(5~),                    right(16~)
+  { row:'A', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15],       R:[16,17,18] },
+  { row:'B', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15,16],    R:[17,18,19] },
+  { row:'C', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15],       R:[16,17,18,19] },
+  { row:'D', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15,16],    R:[17,18,19] },
+  { row:'E', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15],       R:[16,17,18,19] },
+  { row:'F', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15,16],    R:[17,18,19,20] },
+  { row:'G', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15],       R:[16,17,18,19] },
+  { row:'H', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15,16],    R:[17,18,19,20] },
+  { row:'I', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15,16],    R:[17,18,19,20] },
+  { row:'AISLE' },
+  { row:'J', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15,16],    R:[17,18,19] },
+  { row:'K', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15,16],    R:[17,18,19,20] },
+  { row:'L', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15,16],    R:[17,18,19,20] },
+  { row:'M', L:[1,2,3,4],       C:[5,6,7,8,9,10,11,12,13,14,15,16],    R:[17,18,19] },
+  // N열: 좌블럭 1-6이 붙어있고, 중앙 7-16, 우 17-21
+  { row:'N', L:[1,2,3,4,5,6],   C:[7,8,9,10,11,12,13,14,15,16],        R:[17,18,19,20,21], noGapLC:true },
+];
+
+const SEATS_2F = [
+  // 2층: 중앙 블럭만, 시작번호 맞게
+  { row:'O', seats:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] },
+  { row:'P', seats:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21] },
+  { row:'Q', seats:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16] },
+  { row:'R', seats:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16] },
+  { row:'S', seats:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16] },
+  { row:'T', seats:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18] },
+];
+
+// parseSeat용 평탄화
+const SEATS_FLAT = {};
+SEATS_1F.forEach(r => {
+  if (r.row === 'AISLE') return;
+  const nums = [...(r.L||[]), ...(r.C||[]), ...(r.R||[])];
+  SEATS_FLAT[r.row] = nums;
+});
+SEATS_2F.forEach(r => { SEATS_FLAT[r.row] = r.seats; });
+
+const FLOOR_BREAK_AFTER = 'N';
+
+const COLORS = [
+  {bg:'#ff6b9d',border:'#c0004a',label:'1회'},
+  {bg:'#6b9dff',border:'#003acc',label:'2회'},
+  {bg:'#ffa040',border:'#c05000',label:'3회'},
+  {bg:'#a040ff',border:'#6000c0',label:'4회'},
+  {bg:'#40c060',border:'#006020',label:'5회 이상'},
+];
+
+const showSeats = JSON.parse(localStorage.getItem('haemonga_seats_v1') || '{}');
+let focusedId = null;
+
+// 공연 정보 자동 수집
+const SHOW_INFO = {};
+document.querySelectorAll('.row[data-sid]').forEach(r => {
+  SHOW_INFO[r.dataset.sid] = { type: r.dataset.type, yukyon: r.dataset.yukyon, isan: r.dataset.isan };
+});
+
+const LABELS = {
+  all:'전체',
+  jungmin:'정민', parkyuduk:'박유덕', kimdobin:'김도빈', hwangduhyun:'황두현',
+  kimjieon:'김지온', yoonjaeho:'윤재호', yooneuno:'윤은오', hongseongwon:'홍성원'
+};
+
+let sel = { yukyon: null, isan: null };
+let pinnedSel = JSON.parse(localStorage.getItem('haemonga_pin_v1') || 'null');
+
+// ── 필터 ──
+function toggleFilter(attr, val) {
+  if (sel[attr] === val) sel[attr] = null;
+  else sel[attr] = val;
+  applyFilter();
+}
+function resetFilter() {
+  sel = { yukyon: null, isan: null };
+  applyFilter();
+}
+function applyFilter() {
+  const isAll = !sel.yukyon && !sel.isan;
+  document.querySelectorAll('.fb2').forEach(b => b.classList.remove('active', 'pinned'));
+  if (isAll) document.querySelector('.btn-all').classList.add('active');
+  if (sel.yukyon) document.querySelector('.btn-' + sel.yukyon)?.classList.add('active');
+  if (sel.isan)   document.querySelector('.btn-' + sel.isan)?.classList.add('active');
+  if (pinnedSel) {
+    if (pinnedSel.yukyon) document.querySelector('.btn-' + pinnedSel.yukyon)?.classList.add('pinned');
+    if (pinnedSel.isan)   document.querySelector('.btn-' + pinnedSel.isan)?.classList.add('pinned');
+  }
+  const rows = document.querySelectorAll('.row[data-sid]');
+  rows.forEach(r => {
+    let show = true;
+    if (sel.yukyon && r.dataset.yukyon !== sel.yukyon) show = false;
+    if (sel.isan   && r.dataset.isan   !== sel.isan)   show = false;
+    r.classList.toggle('hidden', !show);
+  });
+  document.querySelectorAll('[data-noshow]').forEach(el => el.style.display = isAll ? '' : 'none');
+  ['6','7'].forEach(m => {
+    const d = document.getElementById('div-' + m); if (!d) return;
+    d.style.display = [...rows].some(r => !r.classList.contains('hidden') && r.querySelector('.cell.date')?.textContent.startsWith(m + '월')) ? '' : 'none';
+  });
+  const visible = [...rows].filter(r => !r.classList.contains('hidden')).length;
+  const parts = [];
+  if (sel.yukyon) parts.push(LABELS[sel.yukyon]);
+  if (sel.isan)   parts.push(LABELS[sel.isan]);
+  document.getElementById('countInfo').textContent = (parts.length ? parts.join(' · ') : '전체') + ' ' + visible + '회';
+  renderPinBar();
+}
+
+// ── 고정 ──
+function renderPinBar() {
+  const bar = document.getElementById('pinBar');
+  const isAll = !sel.yukyon && !sel.isan;
+  const isPinned = pinnedSel && JSON.stringify(sel) === JSON.stringify(pinnedSel);
+  let html = '';
+  if (pinnedSel && (pinnedSel.yukyon || pinnedSel.isan)) {
+    const parts = [];
+    if (pinnedSel.yukyon) parts.push(LABELS[pinnedSel.yukyon]);
+    if (pinnedSel.isan)   parts.push(LABELS[pinnedSel.isan]);
+    html += `<span class="pin-status"><span class="pin-dot"></span>📌 ${parts.join(' · ')} 고정 중</span>`;
+    html += `<button class="pin-btn pin-btn-clear" onclick="clearPin()">고정 해제</button>`;
+  }
+  if (!isAll && !isPinned) {
+    const parts = [];
+    if (sel.yukyon) parts.push(LABELS[sel.yukyon]);
+    if (sel.isan)   parts.push(LABELS[sel.isan]);
+    html += `<button class="pin-btn pin-btn-set" onclick="setPin()">📌 ${parts.join(' · ')} 고정하기</button>`;
+  }
+  if (!html) html = '<span style="font-size:11px;color:#6a7a90;">배우를 선택하고 📌 고정하면 다음 접속 때도 유지돼요</span>';
+  bar.innerHTML = html;
+}
+function setPin() {
+  pinnedSel = {...sel};
+  localStorage.setItem('haemonga_pin_v1', JSON.stringify(pinnedSel));
+  applyFilter();
+}
+function clearPin() {
+  pinnedSel = null;
+  localStorage.removeItem('haemonga_pin_v1');
+  applyFilter();
+}
+
+// ── 좌석 입력 ──
+function saveSeats() { localStorage.setItem('haemonga_seats_v1', JSON.stringify(showSeats)); }
+
+function parseSeat(val) {
+  const m = val.trim().toUpperCase().match(/^([A-T])-?(\d+)$/);
+  if (!m) return null;
+  const row = m[1], num = parseInt(m[2]);
+  if (!SEATS_FLAT[row] || !SEATS_FLAT[row].includes(num)) return null;
+  return row + '-' + num;
+}
+function confirmFocused() {
+  if (!focusedId) return;
+  const input = document.getElementById('inp-' + focusedId);
+  if (!input || !input.value.trim()) return;
+  const key = parseSeat(input.value);
+  if (!key) { input.style.borderColor = '#ff8888'; setTimeout(() => input.style.borderColor = '', 1000); return; }
+  if (!showSeats[focusedId]) showSeats[focusedId] = [];
+  if (!showSeats[focusedId].includes(key)) {
+    showSeats[focusedId].push(key);
+    renderTags(focusedId); updateMap(); saveSeats(); updateCounting();
+  }
+  input.value = ''; input.style.borderColor = ''; input.focus();
+}
+function confirmSeat(sid) { focusedId = sid; confirmFocused(); }
+function removeSeat(sid, key) {
+  showSeats[sid] = (showSeats[sid] || []).filter(s => s !== key);
+  renderTags(sid); updateMap(); saveSeats(); updateCounting();
+}
+function renderTags(sid) {
+  const el = document.getElementById('tags-' + sid); if (!el) return; el.innerHTML = '';
+  const cnt = {}; Object.values(showSeats).forEach(seats => seats.forEach(s => { cnt[s] = (cnt[s] || 0) + 1; }));
+  (showSeats[sid] || []).forEach(key => {
+    const c = COLORS[Math.min((cnt[key] || 1), 5) - 1];
+    const tag = document.createElement('span'); tag.className = 'seat-tag'; tag.style.background = c.bg;
+    tag.innerHTML = key + ' <span style="font-size:7px;opacity:0.8">×</span>';
+    tag.onclick = () => removeSeat(sid, key); el.appendChild(tag);
+  });
+}
+
+// ── 카운팅 ──
+function updateCounting() {
+  const keys = ['jungmin','parkyuduk','kimdobin','hwangduhyun','kimjieon','yoonjaeho','yooneuno','hongseongwon'];
+  const cnt = {}; keys.forEach(k => cnt[k] = 0);
+  let total = 0;
+  Object.keys(showSeats).forEach(sid => {
+    if ((showSeats[sid] || []).length > 0 && SHOW_INFO[sid]) {
+      const info = SHOW_INFO[sid];
+      cnt[info.yukyon] = (cnt[info.yukyon] || 0) + 1;
+      cnt[info.isan]   = (cnt[info.isan]   || 0) + 1;
+      cnt[info.type]   = (cnt[info.type]   || 0) + 1;
+      total++;
+    }
+  });
+  keys.forEach(k => { const el = document.getElementById('cnt-' + k); if (el) el.textContent = cnt[k] || 0; });
+  document.getElementById('cnt-total').textContent = total;
+}
+
+// ── 좌석 배치도 ──
+function buildMap() {
+  const wrap = document.getElementById('seatMapInner'); wrap.innerHTML = '';
+  const sectionEl = document.querySelector('.seat-map-section');
+  const availW = sectionEl ? sectionEl.clientWidth - 32 : window.innerWidth - 40;
+  const isMobile = window.innerWidth < 768;
+  const labelW = isMobile ? 10 : 15;
+  const gap = 1;
+  const aisleW = isMobile ? 16 : 26;
+
+  // 최대 21석(N열) 기준 좌석 크기
+  const maxSeats = 21;
+  const sz = Math.max(7, Math.floor(
+    (availW - labelW*2 - aisleW*2 - gap*(maxSeats+2)) / maxSeats
+  ));
+  const fs = Math.max(4, Math.floor(sz * 0.44));
+  const step = sz + gap;
+
+  const mkSeat = (row, num, s, f) => {
+    const el = document.createElement('div');
+    el.className = 'seat';
+    el.id = 'S-' + row + '-' + num;
+    el.style.cssText = `width:${s}px;height:${s}px;font-size:${f}px;flex-shrink:0;margin:0 ${gap/2}px;`;
+    el.textContent = num;
+    return el;
+  };
+  const mkBlk = (row, nums, s, f) => {
+    const b = document.createElement('div');
+    b.style.cssText = 'display:flex;flex-shrink:0;';
+    nums.forEach(n => b.appendChild(mkSeat(row, n, s, f)));
+    return b;
+  };
+  const mkLbl = (txt) => {
+    const l = document.createElement('div');
+    l.className = 'row-label';
+    l.style.cssText = `width:${labelW}px;min-width:${labelW}px;flex-shrink:0;font-size:${isMobile?7:9}px;text-align:center;`;
+    l.textContent = txt;
+    return l;
+  };
+  const mkSp = (w) => {
+    const d = document.createElement('div');
+    d.style.cssText = `flex-shrink:0;width:${Math.max(0,w)}px;`;
+    return d;
+  };
+
+  // ── 1층 ──
+  const fl1 = document.createElement('div'); fl1.className = 'floor-label'; fl1.textContent = '1층';
+  wrap.appendChild(fl1);
+
+  const innerW = availW - labelW * 2;
+
+  SEATS_1F.forEach(r => {
+    if (r.row === 'AISLE') {
+      const sp = document.createElement('div');
+      sp.style.height = (isMobile ? 6 : 10) + 'px';
+      wrap.appendChild(sp);
+      return;
+    }
+
+    const lW = (r.L||[]).length * step;
+    const cW = (r.C||[]).length * step;
+    const rW = (r.R||[]).length * step;
+
+    const rowEl = document.createElement('div');
+    rowEl.style.cssText = `display:flex;align-items:center;margin-bottom:${gap}px;width:100%;`;
+    rowEl.appendChild(mkLbl(r.row));
+
+    const inner = document.createElement('div');
+    inner.style.cssText = 'display:flex;align-items:center;flex:1;min-width:0;';
+
+    if (r.noGapLC) {
+      // N열: L+C 붙어있음, 오른쪽 통로만
+      const lcW = lW + cW;
+      const rightAisle = Math.max(aisleW, innerW - lcW - rW);
+      inner.appendChild(mkBlk(r.row, r.L, sz, fs));
+      inner.appendChild(mkBlk(r.row, r.C, sz, fs));
+      inner.appendChild(mkSp(rightAisle));
+      inner.appendChild(mkBlk(r.row, r.R, sz, fs));
+    } else {
+      // 일반 행: 좌 / 통로 / 중앙 / 통로 / 우
+      const totalBlk = lW + cW + rW;
+      const aisle = Math.max(aisleW, Math.floor((innerW - totalBlk) / 2));
+      inner.appendChild(mkBlk(r.row, r.L, sz, fs));
+      inner.appendChild(mkSp(aisle));
+      inner.appendChild(mkBlk(r.row, r.C, sz, fs));
+      inner.appendChild(mkSp(aisle));
+      inner.appendChild(mkBlk(r.row, r.R, sz, fs));
+    }
+
+    rowEl.appendChild(inner);
+    rowEl.appendChild(mkLbl(r.row));
+    wrap.appendChild(rowEl);
+  });
+
+  // ── 2층 ──
+  const hr = document.createElement('hr'); hr.className = 'floor-divider'; wrap.appendChild(hr);
+  const fl2 = document.createElement('div'); fl2.className = 'floor-label'; fl2.textContent = '2층';
+  wrap.appendChild(fl2);
+
+  // P(21석)가 기준. O,Q~T는 P의 2번 위치(1칸 우측)에서 시작
+  const sz2 = Math.max(7, Math.floor((innerW - gap*21) / 21));
+  const fs2 = Math.max(4, Math.floor(sz2 * 0.44));
+  const step2 = sz2 + gap;
+  // offset: P=0, 나머지=step2×1 (P의 2번 자리 = 1칸 들여쓰기)
+  const off2 = { O: step2, P: 0, Q: step2, R: step2, S: step2, T: step2 };
+
+  SEATS_2F.forEach(r => {
+    const rowEl = document.createElement('div');
+    rowEl.style.cssText = `display:flex;align-items:center;margin-bottom:${gap}px;width:100%;`;
+    rowEl.appendChild(mkLbl(r.row));
+
+    const inner = document.createElement('div');
+    inner.style.cssText = 'display:flex;align-items:center;flex:1;min-width:0;';
+    inner.appendChild(mkSp(off2[r.row] || 0));
+
+    const blk = document.createElement('div');
+    blk.style.cssText = 'display:flex;flex-shrink:0;';
+    r.seats.forEach(n => blk.appendChild(mkSeat(r.row, n, sz2, fs2)));
+    inner.appendChild(blk);
+
+    rowEl.appendChild(inner);
+    rowEl.appendChild(mkLbl(r.row));
+    wrap.appendChild(rowEl);
+  });
+}
+window.addEventListener('resize', () => { buildMap(); updateMap(); });
+
+function updateMap() {
+  document.querySelectorAll('.seat').forEach(el => el.className = 'seat');
+  const cnt = {};
+  Object.values(showSeats).forEach(seats => seats.forEach(s => { cnt[s] = (cnt[s] || 0) + 1; }));
+  Object.keys(cnt).forEach(key => {
+    const el = document.getElementById('S-' + key);
+    if (el) { el.classList.add('mk' + Math.min(cnt[key], 5)); el.title = key + ' (' + cnt[key] + '회 관람)'; }
+  });
+  updateLegend(cnt);
+}
+function updateLegend(cnt) {
+  const el = document.getElementById('seatLegend');
+  const max = Math.max(0, ...Object.values(cnt));
+  if (max === 0) { el.innerHTML = '<span style="font-size:11px;color:#6a7a90;">좌석을 입력하면 여기에 표시됩니다</span>'; return; }
+  el.innerHTML = '';
+  for (let i = 1; i <= Math.min(max, 5); i++) {
+    const c = COLORS[i - 1]; const item = document.createElement('div'); item.className = 'seat-legend-item';
+    item.innerHTML = '<div class="seat-legend-dot" style="background:' + c.bg + ';border:1px solid ' + c.border + '"></div>' + c.label;
+    el.appendChild(item);
+  }
+}
+
+// ── 내보내기/가져오기 ──
+function exportData() {
+  const blob = new Blob([JSON.stringify(showSeats, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob); const a = document.createElement('a');
+  a.href = url; a.download = '해몽가_내좌석.json'; a.click(); URL.revokeObjectURL(url);
+}
+function importData(e) {
+  const file = e.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const data = JSON.parse(ev.target.result);
+      Object.keys(data).forEach(sid => { showSeats[sid] = data[sid]; });
+      saveSeats(); Object.keys(showSeats).forEach(sid => renderTags(sid)); updateMap(); updateCounting();
+      alert('데이터를 불러왔어요! 🎉');
+    } catch(e) { alert('파일을 읽을 수 없어요 ㅠㅠ'); }
+  };
+  reader.readAsText(file); e.target.value = '';
+}
+
+// ── 입력 이벤트 ──
+document.querySelectorAll('.seat-input').forEach(inp => {
+  inp.addEventListener('focus', () => { focusedId = inp.id.replace('inp-', ''); });
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); confirmFocused(); } });
+});
+
+// ── 초기화 ──
+buildMap();
+Object.keys(showSeats).forEach(sid => renderTags(sid));
+updateMap(); updateCounting();
+if (pinnedSel) {
+  sel = { yukyon: pinnedSel.yukyon || null, isan: pinnedSel.isan || null };
+}
+applyFilter();
+</script>
+
+
+</body></html>
