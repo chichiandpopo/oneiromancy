@@ -790,23 +790,23 @@ body > *{position:relative;z-index:1;}
 <div class="counting-section">
   <div class="cgl">유견</div>
   <div class="counting-box">
-    <div class="count-card"><div class="cnt-name" style="color:#e09060;">정민</div><div class="cnt-num" style="color:#e09060;" id="cnt-jungmin">0</div><div class="cnt-label">회</div></div>
-    <div class="count-card"><div class="cnt-name" style="color:#c090e0;">박유덕</div><div class="cnt-num" style="color:#c090e0;" id="cnt-parkyuduk">0</div><div class="cnt-label">회</div></div>
-    <div class="count-card"><div class="cnt-name" style="color:#80c0e0;">김도빈</div><div class="cnt-num" style="color:#80c0e0;" id="cnt-kimdobin">0</div><div class="cnt-label">회</div></div>
-    <div class="count-card"><div class="cnt-name" style="color:#70c090;">황두현</div><div class="cnt-num" style="color:#70c090;" id="cnt-hwangduhyun">0</div><div class="cnt-label">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#e09060;">정민</div><div class="cnt-num" style="color:#e09060;" id="cnt-jungmin">0</div><div class="cnt-label" id="cnt-jungmin-total">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#c090e0;">박유덕</div><div class="cnt-num" style="color:#c090e0;" id="cnt-parkyuduk">0</div><div class="cnt-label" id="cnt-parkyuduk-total">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#80c0e0;">김도빈</div><div class="cnt-num" style="color:#80c0e0;" id="cnt-kimdobin">0</div><div class="cnt-label" id="cnt-kimdobin-total">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#70c090;">황두현</div><div class="cnt-num" style="color:#70c090;" id="cnt-hwangduhyun">0</div><div class="cnt-label" id="cnt-hwangduhyun-total">회</div></div>
   </div>
   <div class="cgl">이산</div>
   <div class="counting-box">
-    <div class="count-card"><div class="cnt-name" style="color:#e08080;">김지온</div><div class="cnt-num" style="color:#e08080;" id="cnt-kimjieon">0</div><div class="cnt-label">회</div></div>
-    <div class="count-card"><div class="cnt-name" style="color:#90b0e0;">윤재호</div><div class="cnt-num" style="color:#90b0e0;" id="cnt-yoonjaeho">0</div><div class="cnt-label">회</div></div>
-    <div class="count-card"><div class="cnt-name" style="color:#d0b060;">윤은오</div><div class="cnt-num" style="color:#d0b060;" id="cnt-yooneuno">0</div><div class="cnt-label">회</div></div>
-    <div class="count-card"><div class="cnt-name" style="color:#70c0c0;">홍성원</div><div class="cnt-num" style="color:#70c0c0;" id="cnt-hongseongwon">0</div><div class="cnt-label">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#e08080;">김지온</div><div class="cnt-num" style="color:#e08080;" id="cnt-kimjieon">0</div><div class="cnt-label" id="cnt-kimjieon-total">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#90b0e0;">윤재호</div><div class="cnt-num" style="color:#90b0e0;" id="cnt-yoonjaeho">0</div><div class="cnt-label" id="cnt-yoonjaeho-total">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#d0b060;">윤은오</div><div class="cnt-num" style="color:#d0b060;" id="cnt-yooneuno">0</div><div class="cnt-label" id="cnt-yooneuno-total">회</div></div>
+    <div class="count-card"><div class="cnt-name" style="color:#70c0c0;">홍성원</div><div class="cnt-num" style="color:#70c0c0;" id="cnt-hongseongwon">0</div><div class="cnt-label" id="cnt-hongseongwon-total">회</div></div>
   </div>
   <div class="cnt-total-box">
     <div class="cnt-total-card">
       <div class="cnt-name">합계</div>
       <div class="cnt-num" id="cnt-total">0</div>
-      <div class="cnt-label">회 관람</div>
+      <div class="cnt-label" id="cnt-total-label">/ 43회 관람</div>
     </div>
   </div>
 </div>
@@ -1026,6 +1026,14 @@ function renderTags(sid) {
 function updateCounting() {
   const keys = ['jungmin','parkyuduk','kimdobin','hwangduhyun','kimjieon','yoonjaeho','yooneuno','hongseongwon'];
   const cnt = {}; keys.forEach(k => cnt[k] = 0);
+
+  // 배우별 총 공연 수 계산
+  const totalPerActor = {}; keys.forEach(k => totalPerActor[k] = 0);
+  Object.values(SHOW_INFO).forEach(info => {
+    totalPerActor[info.yukyon] = (totalPerActor[info.yukyon] || 0) + 1;
+    totalPerActor[info.isan]   = (totalPerActor[info.isan]   || 0) + 1;
+  });
+
   let total = 0;
   Object.keys(showSeats).forEach(sid => {
     if ((showSeats[sid] || []).length > 0 && SHOW_INFO[sid]) {
@@ -1035,8 +1043,15 @@ function updateCounting() {
       total++;
     }
   });
-  keys.forEach(k => { const el = document.getElementById('cnt-' + k); if (el) el.textContent = cnt[k] || 0; });
+
+  keys.forEach(k => {
+    const el = document.getElementById('cnt-' + k);
+    if (el) el.textContent = cnt[k] || 0;
+    const tlEl = document.getElementById('cnt-' + k + '-total');
+    if (tlEl) tlEl.textContent = '/ ' + (totalPerActor[k] || 0) + '회';
+  });
   document.getElementById('cnt-total').textContent = total;
+  document.getElementById('cnt-total-label').textContent = '/ 43회 관람';
 }
 
 // ── 좌석 배치도 ──
