@@ -415,7 +415,7 @@ body > *{position:relative;z-index:1;}
 
 </div><!-- /card2 -->
 
-<div class="count-info" id="countInfo">전체 43회</div>
+<div class="count-info" id="countInfo">전체 0회</div>
 
 <div class="page-card" style="padding:0;overflow:hidden;">
 <div class="table-wrap" style="max-width:100%;margin:0;border-radius:0;border:none;">
@@ -942,6 +942,7 @@ function applyFilter() {
     const d = document.getElementById('div-' + m); if (!d) return;
     d.style.display = [...rows].some(r => !r.classList.contains('hidden') && r.querySelector('.cell.date')?.textContent.startsWith(m + '월')) ? '' : 'none';
   });
+  const totalShows = Object.keys(SHOW_INFO).length;
   const visible = [...rows].filter(r => !r.classList.contains('hidden')).length;
   const parts = [];
   if (sel.yukyon) parts.push(LABELS[sel.yukyon]);
@@ -1060,8 +1061,9 @@ function updateCounting() {
     const tlEl = document.getElementById('cnt-' + k + '-total');
     if (tlEl) tlEl.textContent = '/ ' + (totalPerActor[k] || 0) + '회';
   });
+  const totalShows = Object.keys(SHOW_INFO).length;
   document.getElementById('cnt-total').textContent = total;
-  document.getElementById('cnt-total-label').textContent = '/ 43회 관람';
+  document.getElementById('cnt-total-label').textContent = '/ ' + totalShows + '관람';
 }
 
 // ── 좌석 배치도 ──
