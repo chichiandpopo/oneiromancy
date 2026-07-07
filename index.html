@@ -1228,6 +1228,8 @@ function applyFilter() {
   if (sel.isan)   parts.push(LABELS[sel.isan]);
   document.getElementById('countInfo').textContent = (parts.length ? parts.join(' · ') : '전체') + ' ' + visible + '회';
   renderPinBar();
+  updateCounting();
+  updateMap();
 }
 
 // ── 고정 ──
@@ -1312,21 +1314,41 @@ function renderTags(sid) {
   });
 }
 
-// ── 카운팅 ──
+// ── 카운팅 (필터 연동) ──
+function getFilteredSids() {
+  // 현재 필터에 해당하는 sid 목록 반환
+  const isAll = !sel.yukyon && !sel.isan;
+  return Object.keys(SHOW_INFO).filter(sid => {
+    const info = SHOW_INFO[sid];
+    if (!isAll) {
+      if (sel.yukyon && info.yukyon !== sel.yukyon) return false;
+      if (sel.isan   && info.isan   !== sel.isan)   return false;
+    }
+    return true;
+  });
+}
+
 function updateCounting() {
   const keys = ['jungmin','parkyuduk','kimdobin','hwangduhyun','kimjieon','yoonjaeho','yooneuno','hongseongwon'];
   const cnt = {}; keys.forEach(k => cnt[k] = 0);
-
-  // 배우별 총 공연 수 계산
   const totalPerActor = {}; keys.forEach(k => totalPerActor[k] = 0);
-  Object.values(SHOW_INFO).forEach(info => {
+
+  // 필터된 sid만 대상으로
+  const filteredSids = getFilteredSids();
+  const filteredSet = new Set(filteredSids);
+
+  // 필터된 공연들의 배우별 총 공연 수
+  filteredSids.forEach(sid => {
+    const info = SHOW_INFO[sid];
+    if (!info) return;
     totalPerActor[info.yukyon] = (totalPerActor[info.yukyon] || 0) + 1;
     totalPerActor[info.isan]   = (totalPerActor[info.isan]   || 0) + 1;
   });
 
+  // 필터된 공연 중 좌석 입력된 것만 카운트
   let total = 0;
   Object.keys(showSeats).forEach(sid => {
-    if ((showSeats[sid] || []).length > 0 && SHOW_INFO[sid]) {
+    if ((showSeats[sid] || []).length > 0 && SHOW_INFO[sid] && filteredSet.has(sid)) {
       const info = SHOW_INFO[sid];
       cnt[info.yukyon] = (cnt[info.yukyon] || 0) + 1;
       cnt[info.isan]   = (cnt[info.isan]   || 0) + 1;
@@ -1338,11 +1360,11 @@ function updateCounting() {
     const el = document.getElementById('cnt-' + k);
     if (el) el.textContent = cnt[k] || 0;
     const tlEl = document.getElementById('cnt-' + k + '-total');
-    if (tlEl) tlEl.textContent = '/ ' + (totalPerActor[k] || 0) + '회';
+    // 필터 기준으로 해당 배우가 등장하는 총 횟수 표시
+    if (tlEl) tlEl.textContent = (totalPerActor[k] || 0) > 0 ? '/ ' + totalPerActor[k] + '회' : '/ 0회';
   });
-  const totalShows = Object.keys(SHOW_INFO).length;
   document.getElementById('cnt-total').textContent = total;
-  document.getElementById('cnt-total-label').textContent = '/ ' + totalShows + '회';
+  document.getElementById('cnt-total-label').textContent = '/ ' + filteredSids.length + '회';
 }
 
 // ── 좌석 배치도 ──
@@ -1470,8 +1492,12 @@ window.addEventListener('resize', () => { buildMap(); updateMap(); });
 
 function updateMap() {
   document.querySelectorAll('.seat').forEach(el => el.className = 'seat');
+  const filteredSet = new Set(getFilteredSids());
   const cnt = {};
-  Object.values(showSeats).forEach(seats => seats.forEach(s => { cnt[s] = (cnt[s] || 0) + 1; }));
+  Object.keys(showSeats).forEach(sid => {
+    if (!filteredSet.has(sid)) return; // 필터 밖 공연 좌석은 제외
+    (showSeats[sid] || []).forEach(s => { cnt[s] = (cnt[s] || 0) + 1; });
+  });
   Object.keys(cnt).forEach(key => {
     const el = document.getElementById('S-' + key);
     if (el) { el.classList.add('mk' + Math.min(cnt[key], 5)); el.title = key + ' (' + cnt[key] + '회 관람)'; }
