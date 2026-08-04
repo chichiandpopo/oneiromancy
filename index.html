@@ -1781,33 +1781,39 @@ function copyCast(sid) {
   const row = document.querySelector(`.row[data-sid="${sid}"]`);
   if (!row) return;
 
-  const date = row.querySelector('.cell.date')?.childNodes[0]?.textContent?.trim() || '';
+  // 날짜: "9월 24일" → "9/24" 형태로 변환
+  const dateRaw = row.querySelector('.cell.date')?.childNodes[0]?.textContent?.trim() || '';
+  const dateFormatted = dateRaw.replace(/(\d+)월\s*(\d+)일/, '$1/$2');
+
   const day  = row.querySelector('.cell.day')?.textContent?.trim() || '';
   const time = row.querySelector('.cell.time')?.textContent?.trim() || '';
 
-  // 이벤트 태그 텍스트 (이모티콘 제외)
-  const eventTagRaw = row.querySelector('.event-tag')?.textContent?.trim() || '';
-  const eventTag = eventTagRaw.replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{FE00}-\u{FEFF}]/gu, '').trim();
-
-  // 유견/이산 배우 이름만 (첫공 fb 뱃지, role 텍스트 제외)
-  const castCells = row.querySelectorAll('.cell:not(.date):not(.day):not(.time):not(.seat-cell)');
+  // 배우 이름만 (첫공/막공/100회 뱃지 제외, 역할명 제외)
   function getActorName(cell) {
     const tag = cell?.querySelector('span.yukyon-tag');
     if (tag) {
-      // yukyon-tag 안에서 fb 뱃지 제외하고 텍스트만
       return [...tag.childNodes]
         .filter(n => n.nodeType === Node.TEXT_NODE)
         .map(n => n.textContent.trim())
-        .join('') || tag.childNodes[0]?.textContent?.trim() || '';
+        .join('');
     }
-    return cell?.textContent?.trim() || '';
+    return [...(cell?.childNodes || [])]
+      .filter(n => n.nodeType === Node.TEXT_NODE)
+      .map(n => n.textContent.trim())
+      .join('');
   }
 
+  const castCells = row.querySelectorAll('.cell:not(.date):not(.day):not(.time):not(.seat-cell)');
   const yukyon = getActorName(castCells[0]);
   const isan   = getActorName(castCells[1]);
 
-  let text = `뮤지컬 해몽가\n${date} (${day}) ${time}\n${yukyon} ${isan}`;
-  if (eventTag) text += `\n${eventTag}`;
+  // 이벤트 태그들 (이모티콘 제거, 여러 개 있을 수 있음)
+  const eventTags = [...row.querySelectorAll('.event-tag')]
+    .map(el => el.textContent.trim().replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{FE00}-\u{FEFF}]/gu, '').trim())
+    .filter(Boolean);
+
+  let text = `뮤지컬 해몽가\n${dateFormatted} ${day} ${time}\n${yukyon} ${isan}`;
+  if (eventTags.length) text += '\n' + eventTags.join('\n');
 
   navigator.clipboard.writeText(text).then(() => {
     const btn = row.querySelector('.copy-btn');
