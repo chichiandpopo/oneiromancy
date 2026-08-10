@@ -922,12 +922,7 @@ body > *{position:relative;z-index:1;}
     <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s60" placeholder=""><button onclick="confirmSeat('s60')" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s60"></div></div><div class="cell" style="display:flex;align-items:center;justify-content:center;"><button class="copy-btn" onclick="copyCast('s60')" title="캐스트 복사">🌟</button></div>
   </div>
 
-  <div class="row hwangduhyun-row" data-type="hwangduhyun" data-sid="s61" data-yukyon="hwangduhyun" data-isan="hongseongwon">
-    <div class="cell date">8월 9일<a class="event-tag event-tag-9" href="https://x.com/i/status/2074726273675641232" target="_blank">🤳 셀카 포토카드&amp;커튼콜 데이</a></div><div class="cell day day-sun">일</div><div class="cell time">18:00</div>
-    <div class="cell"><span class="yukyon-tag tag-hwangduhyun">황두현</span></div>
-    <div class="cell"><span class="yukyon-tag tag-hongseongwon">홍성원</span></div>
-    <div class="cell seat-cell"><div style="display:flex;gap:2px;"><input class="seat-input" style="flex:1;min-width:0;" inputmode="text" enterkeyhint="done" autocomplete="off" autocapitalize="characters" id="inp-s61" placeholder=""><button onclick="confirmSeat('s61')" style="flex-shrink:0;background:#c9a84c;color:#0a0f2e;border:none;border-radius:5px;font-size:9px;font-weight:700;padding:2px 5px;cursor:pointer;font-family:inherit;">✓</button></div><div class="seat-tags" id="tags-s61"></div></div><div class="cell" style="display:flex;align-items:center;justify-content:center;"><button class="copy-btn" onclick="copyCast('s61')" title="캐스트 복사">🌟</button></div>
-  </div>
+
 
   <div class="no-show" data-noshow="1">8월 10일 (월) — 공연 없음</div>
 
@@ -1376,7 +1371,7 @@ const COLORS = [
   {bg:'#40c060',border:'#006020',label:'5회 이상'},
 ];
 
-const showSeats = JSON.parse(localStorage.getItem('haemonga_seats_v1') || '{}');
+const showSeats = {};
 let focusedId = null;
 
 // 공연 정보 자동 수집
@@ -1768,9 +1763,14 @@ function importData(e) {
   reader.onload = ev => {
     try {
       const data = JSON.parse(ev.target.result);
-      Object.keys(data).forEach(sid => { showSeats[sid] = data[sid]; });
+      let skipped = 0;
+      Object.keys(data).forEach(sid => {
+        if (SHOW_INFO[sid]) showSeats[sid] = data[sid]; // 유효한 sid만
+        else skipped++;
+      });
       saveSeats(); Object.keys(showSeats).forEach(sid => renderTags(sid)); updateMap(); updateCounting();
-      alert('데이터를 불러왔어요! 🎉');
+      const msg = skipped > 0 ? `데이터를 불러왔어요! 🎉\n(삭제된 공연 ${skipped}건은 제외됐어요)` : '데이터를 불러왔어요! 🎉';
+      alert(msg);
     } catch(e) { alert('파일을 읽을 수 없어요 ㅠㅠ'); }
   };
   reader.readAsText(file); e.target.value = '';
@@ -1839,6 +1839,11 @@ document.querySelectorAll('.seat-input').forEach(inp => {
 
 // ── 초기화 ──
 buildMap();
+// 저장된 데이터 복원 — 삭제된 공연 sid는 자동 제거
+const savedRaw = JSON.parse(localStorage.getItem('haemonga_seats_v1') || '{}');
+Object.keys(savedRaw).forEach(sid => {
+  if (SHOW_INFO[sid]) showSeats[sid] = savedRaw[sid]; // 유효한 sid만 복원
+});
 Object.keys(showSeats).forEach(sid => renderTags(sid));
 updateMap(); updateCounting(); updateCountingDim();
 if (pinnedSel) {
