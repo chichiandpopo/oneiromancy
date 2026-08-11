@@ -1849,12 +1849,35 @@ async function saveCapture() {
   btn.disabled = true;
   try {
     const el = document.getElementById('capture-area');
+    // 캡처 전 배경 강제 지정
+    const origBg = el.style.background;
+    el.style.background = 'linear-gradient(180deg,#1a2a5e 0%,#1e3068 30%,#1a2860 70%,#141e50 100%)';
     const canvas = await html2canvas(el, {
-      backgroundColor: '#0d1540',
+      backgroundColor: '#1a2a5e',
       scale: 2,
       useCORS: true,
+      allowTaint: true,
       logging: false,
+      onclone: (doc) => {
+        // 클론된 DOM의 모든 반투명 배경을 불투명하게
+        doc.querySelectorAll('.page-card').forEach(card => {
+          card.style.background = 'rgba(8,14,60,0.95)';
+        });
+        doc.querySelectorAll('.count-card').forEach(card => {
+          card.style.background = 'rgba(255,255,255,0.12)';
+        });
+        doc.querySelectorAll('.cnt-total-card').forEach(card => {
+          card.style.background = 'rgba(201,168,76,0.18)';
+        });
+        doc.querySelectorAll('.seat-map-section').forEach(s => {
+          s.style.background = 'rgba(255,255,255,0.10)';
+        });
+        doc.querySelectorAll('.seat').forEach(s => {
+          if (!s.className.includes('mk')) s.style.background = 'rgba(255,255,255,0.14)';
+        });
+      }
     });
+    el.style.background = origBg;
     const link = document.createElement('a');
     link.download = '해몽가_정산판.jpg';
     link.href = canvas.toDataURL('image/jpeg', 0.95);
