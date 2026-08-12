@@ -1322,6 +1322,7 @@ body > *{position:relative;z-index:1;}
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image-more/3.3.0/dom-to-image-more.min.js"></script>
 <script>
 // ══════════════════════════════════════════════════════
 // 좌석 데이터 (실제 좌석표 이미지 기준)
@@ -1831,65 +1832,7 @@ function copyCast(sid) {
     if (!btn) return;
     btn.textContent = '✅';
     btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = '🌟'; btn.classList.remove('copied'); }, 1500);
-  }).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
-    document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
-    const btn = row.querySelector('.copy-btn');
-    if (btn) { btn.textContent = '✅'; setTimeout(() => btn.textContent = '🌟', 1500); }
-  });
-}
-
-// ── 정산판 저장 ──
-async function saveCapture() {
-  const btn = document.querySelector('.save-btn');
-  btn.textContent = '⏳ 저장 중...';
-  btn.disabled = true;
-  try {
-    const el = document.getElementById('capture-area');
-    // 캡처 전 배경 강제 지정
-    const origBg = el.style.background;
-    el.style.background = 'linear-gradient(180deg,#1a2a5e 0%,#1e3068 30%,#1a2860 70%,#141e50 100%)';
-    const canvas = await html2canvas(el, {
-      backgroundColor: '#1a2a5e',
-      scale: 2,
-      useCORS: true,
-      allowTaint: true,
-      logging: false,
-      onclone: (doc) => {
-        // 클론된 DOM의 모든 반투명 배경을 불투명하게
-        doc.querySelectorAll('.page-card').forEach(card => {
-          card.style.background = 'rgba(8,14,60,0.95)';
-        });
-        doc.querySelectorAll('.count-card').forEach(card => {
-          card.style.background = 'rgba(255,255,255,0.12)';
-        });
-        doc.querySelectorAll('.cnt-total-card').forEach(card => {
-          card.style.background = 'rgba(201,168,76,0.18)';
-        });
-        doc.querySelectorAll('.seat-map-section').forEach(s => {
-          s.style.background = 'rgba(255,255,255,0.10)';
-        });
-        doc.querySelectorAll('.seat').forEach(s => {
-          if (!s.className.includes('mk')) s.style.background = 'rgba(255,255,255,0.14)';
-        });
-      }
-    });
-    el.style.background = origBg;
-    const link = document.createElement('a');
-    link.download = '해몽가_정산판.jpg';
-    link.href = canvas.toDataURL('image/jpeg', 0.95);
-    link.click();
-  } catch(e) {
-    alert('저장에 실패했어요 ㅠㅠ');
-  }
-  btn.textContent = '📷 정산판 저장';
-  btn.disabled = false;
-}
-
-// ── 입력 이벤트 ──
+  // ── 입력 이벤트 ──
 document.querySelectorAll('.seat-input').forEach(inp => {
   inp.addEventListener('focus', () => { focusedId = inp.id.replace('inp-', ''); });
   inp.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); confirmFocused(); } });
