@@ -306,6 +306,21 @@ body > *{position:relative;z-index:1;}
 .cnt-total-card .cnt-label{font-size:11px;color:#8090a0;margin-top:2px;}
 .cnt-total-big{font-size:9px;font-weight:700;letter-spacing:5px;color:rgba(201,168,76,0.6);text-align:center;margin-top:6px;font-family:'Noto Sans KR',sans-serif;}
 
+/* 페어 카운팅 */
+.pair-section{margin:14px 4px 2px;}
+.pair-divider{display:flex;align-items:center;gap:8px;margin:10px 0 6px;}
+.pair-divider::before,.pair-divider::after{content:'';flex:1;height:1px;background:rgba(201,168,76,0.25);}
+.pair-divider-label{font-size:9px;font-weight:700;letter-spacing:4px;color:rgba(201,168,76,0.7);font-family:'Noto Sans KR',sans-serif;}
+.pair-grid{display:flex;flex-direction:column;gap:5px;}
+.pair-card{background:rgba(8,14,45,0.6);border:1px solid rgba(201,168,76,0.18);border-radius:10px;padding:8px 14px;display:flex;align-items:center;gap:0;position:relative;}
+.pair-names{flex:1;display:flex;align-items:center;gap:6px;}
+.pair-yukyon{font-size:11px;font-weight:700;color:rgba(201,168,76,0.95);letter-spacing:0.5px;min-width:38px;text-align:right;}
+.pair-diamond{font-size:10px;color:rgba(201,168,76,0.45);flex-shrink:0;}
+.pair-isan{font-size:11px;font-weight:700;color:rgba(130,170,210,0.95);letter-spacing:0.5px;min-width:38px;text-align:left;}
+.pair-right{display:flex;align-items:baseline;gap:3px;margin-left:auto;}
+.pair-count{font-size:22px;font-weight:700;color:#e8dfc4;line-height:1;}
+.pair-total{font-size:10px;color:rgba(130,150,180,0.65);}
+
 /* 복사 버튼 */
 .copy-btn{
   font-size:13px;background:none;border:none;cursor:pointer;
@@ -1344,7 +1359,8 @@ body > *{position:relative;z-index:1;}
 <div class="settle-title">
   <div class="st-musical">MUSICAL</div>
   <div class="st-wordmark">해몽가</div>
-  <div class="st-label">✦ 2026 관극 정산 ✦</div>
+  <div class="st-label">2026.06.25 ~ 2026.09.13</div>
+  <div class="st-label" style="font-size:9px;letter-spacing:1px;color:rgba(201,168,76,0.7);margin-top:2px;">예스24스테이지 1관</div>
 </div>
 <div class="counting-section">
   <div class="role-divider"><span class="role-name">유견</span></div>
@@ -1368,6 +1384,77 @@ body > *{position:relative;z-index:1;}
       <div class="cnt-label" id="cnt-total-label">/ 106회</div>
     </div>
   </div>
+  <!-- 페어 카운팅 -->
+    <div class="pair-section">
+    <div class="pair-divider"><span class="pair-divider-label">P A I R</span></div>
+    <div class="pair-grid">
+      <div class="pair-card" id="pair-jungmin-kimjieon">
+        <div class="pair-names"><span class="pair-yukyon">정민</span><span class="pair-diamond">✦</span><span class="pair-isan">김지온</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-jungmin-yoonjaeho">
+        <div class="pair-names"><span class="pair-yukyon">정민</span><span class="pair-diamond">✦</span><span class="pair-isan">윤재호</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-jungmin-yooneuno">
+        <div class="pair-names"><span class="pair-yukyon">정민</span><span class="pair-diamond">✦</span><span class="pair-isan">윤은오</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-jungmin-hongseongwon">
+        <div class="pair-names"><span class="pair-yukyon">정민</span><span class="pair-diamond">✦</span><span class="pair-isan">홍성원</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-parkyuduk-kimjieon">
+        <div class="pair-names"><span class="pair-yukyon">박유덕</span><span class="pair-diamond">✦</span><span class="pair-isan">김지온</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-parkyuduk-yoonjaeho">
+        <div class="pair-names"><span class="pair-yukyon">박유덕</span><span class="pair-diamond">✦</span><span class="pair-isan">윤재호</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-parkyuduk-yooneuno">
+        <div class="pair-names"><span class="pair-yukyon">박유덕</span><span class="pair-diamond">✦</span><span class="pair-isan">윤은오</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-parkyuduk-hongseongwon">
+        <div class="pair-names"><span class="pair-yukyon">박유덕</span><span class="pair-diamond">✦</span><span class="pair-isan">홍성원</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-kimdobin-kimjieon">
+        <div class="pair-names"><span class="pair-yukyon">김도빈</span><span class="pair-diamond">✦</span><span class="pair-isan">김지온</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-kimdobin-yoonjaeho">
+        <div class="pair-names"><span class="pair-yukyon">김도빈</span><span class="pair-diamond">✦</span><span class="pair-isan">윤재호</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-kimdobin-yooneuno">
+        <div class="pair-names"><span class="pair-yukyon">김도빈</span><span class="pair-diamond">✦</span><span class="pair-isan">윤은오</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-kimdobin-hongseongwon">
+        <div class="pair-names"><span class="pair-yukyon">김도빈</span><span class="pair-diamond">✦</span><span class="pair-isan">홍성원</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-hwangduhyun-kimjieon">
+        <div class="pair-names"><span class="pair-yukyon">황두현</span><span class="pair-diamond">✦</span><span class="pair-isan">김지온</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-hwangduhyun-yoonjaeho">
+        <div class="pair-names"><span class="pair-yukyon">황두현</span><span class="pair-diamond">✦</span><span class="pair-isan">윤재호</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-hwangduhyun-yooneuno">
+        <div class="pair-names"><span class="pair-yukyon">황두현</span><span class="pair-diamond">✦</span><span class="pair-isan">윤은오</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+      <div class="pair-card" id="pair-hwangduhyun-hongseongwon">
+        <div class="pair-names"><span class="pair-yukyon">황두현</span><span class="pair-diamond">✦</span><span class="pair-isan">홍성원</span></div>
+        <div class="pair-right"><span class="pair-count">0</span><span class="pair-total">/ 0</span></div>
+      </div>
+    </div>
+  </div><!-- /pair-section -->
+
   <div class="cnt-total-big">MUSICAL 해몽가 · 2026</div>
 </div>
 </div><!-- /settle-wrap -->
@@ -1688,6 +1775,47 @@ function updateCounting() {
   });
   document.getElementById('cnt-total').textContent = total;
   document.getElementById('cnt-total-label').textContent = '/ ' + filteredSids.length + '회';
+
+  // ── 페어 카운팅 ──
+  const yukyonKeys = ['jungmin','parkyuduk','kimdobin','hwangduhyun'];
+  const isanKeys   = ['kimjieon','yoonjaeho','yooneuno','hongseongwon'];
+  const pairCnt   = {};
+  const pairTotal = {};
+  yukyonKeys.forEach(y => isanKeys.forEach(i => { pairCnt[y+'-'+i] = 0; pairTotal[y+'-'+i] = 0; }));
+
+  // 모든 공연 기준으로 페어 토탈 계산
+  Object.keys(SHOW_INFO).forEach(sid => {
+    const info = SHOW_INFO[sid]; if (!info) return;
+    const y = info.yukyon, i = info.isan;
+    if (pairTotal[y+'-'+i] !== undefined) pairTotal[y+'-'+i]++;
+  });
+
+  // 필터된 공연 중 좌석이 입력된 공연만 페어 카운트
+  filteredSids.forEach(sid => {
+    const seats = showSeats[sid];
+    if (!seats || seats.length === 0) return;
+    const info = SHOW_INFO[sid]; if (!info) return;
+    const y = info.yukyon, i = info.isan;
+    if (pairCnt[y+'-'+i] !== undefined) pairCnt[y+'-'+i]++;
+  });
+
+  yukyonKeys.forEach(y => isanKeys.forEach(i => {
+    const card = document.getElementById('pair-' + y + '-' + i);
+    if (!card) return;
+    const cnt = pairCnt[y+'-'+i];
+    card.querySelector('.pair-count').textContent = cnt;
+    card.querySelector('.pair-total').textContent = '/ ' + pairTotal[y+'-'+i] + '회';
+    // 좌석 입력된 페어만 표시
+    card.style.display = cnt > 0 ? '' : 'none';
+  }));
+
+  // 보이는 카드 없으면 섹션 전체 숨김
+  const pairSection = document.querySelector('.pair-section');
+  if (pairSection) {
+    const allCards = pairSection.querySelectorAll('.pair-card');
+    const anyVisible = [...allCards].some(c => c.style.display !== 'none');
+    pairSection.style.display = anyVisible ? '' : 'none';
+  }
 }
 
 // ── 좌석 배치도 ──
@@ -1926,10 +2054,19 @@ function saveCapture() {
       backgroundColor: '#0d1535',
       logging: false,
     }).then(canvas => {
-      const link = document.createElement('a');
-      link.download = '해몽가_정산판.jpg';
-      link.href = canvas.toDataURL('image/jpeg', 0.95);
-      link.click();
+      canvas.toBlob(function(blob) {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = '해몽가_정산판.jpg';
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        setTimeout(function() {
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+        }, 1000);
+      }, 'image/jpeg', 0.95);
     }).catch(err => {
       console.error(err);
     });
