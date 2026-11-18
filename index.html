@@ -1893,135 +1893,39 @@ function copyCast(sid) {
 
 // ── 정산판 저장 ──
 function saveCapture() {
-  const actors = [
-    { id:'jungmin',     name:'정민',   color:'#e09060', group:'유견' },
-    { id:'parkyuduk',   name:'박유덕', color:'#c090e0', group:'유견' },
-    { id:'kimdobin',    name:'김도빈', color:'#80c0e0', group:'유견' },
-    { id:'hwangduhyun', name:'황두현', color:'#70c090', group:'유견' },
-    { id:'kimjieon',    name:'김지온', color:'#e08080', group:'이산' },
-    { id:'yoonjaeho',   name:'윤재호', color:'#90b0e0', group:'이산' },
-    { id:'yooneuno',    name:'윤은오', color:'#d0b060', group:'이산' },
-    { id:'hongseongwon',name:'홍성원', color:'#70c0c0', group:'이산' },
-  ];
+  // #capture-area 전체를 직접 캡처 (settle-wrap + seat-map-section 포함)
+  const captureEl = document.getElementById('capture-area');
+  if (!captureEl) { alert('정산 영역을 찾을 수 없습니다.'); return; }
 
-  const filteredSids = getFilteredSids();
-  const filteredSet = new Set(filteredSids);
-  const totalPerActor = {};
-  actors.forEach(a => totalPerActor[a.id] = 0);
-  filteredSids.forEach(sid => {
-    const info = SHOW_INFO[sid]; if(!info) return;
-    totalPerActor[info.yukyon] = (totalPerActor[info.yukyon]||0)+1;
-    totalPerActor[info.isan]   = (totalPerActor[info.isan]  ||0)+1;
-  });
-  const cntPerActor = {};
-  actors.forEach(a => cntPerActor[a.id] = 0);
-  let totalViewed = 0;
-  Object.keys(showSeats).forEach(sid => {
-    if((showSeats[sid]||[]).length>0 && SHOW_INFO[sid] && filteredSet.has(sid)){
-      cntPerActor[SHOW_INFO[sid].yukyon]++;
-      cntPerActor[SHOW_INFO[sid].isan]++;
-      totalViewed++;
-    }
-  });
-
-  const seatMapHTML = document.getElementById('seatMapInner')?.innerHTML || '';
-  const legendHTML  = document.getElementById('seatLegend')?.outerHTML || '';
-
-  function actorCards(group) {
-    return actors.filter(a=>a.group===group).map(a => {
-      const dimmed = (!sel.yukyon && !sel.isan) ? false
-        : group==='유견' ? (!!sel.yukyon && sel.yukyon!==a.id)
-        : (!!sel.isan && sel.isan!==a.id);
-      return `<div style="flex:1;background:rgba(255,255,255,0.06);border-radius:12px;padding:10px 4px 8px;text-align:center;border:1px solid rgba(201,168,76,0.22);opacity:${dimmed?0.3:1};">
-        <div style="font-size:13px;font-weight:700;color:${a.color};margin-bottom:4px;letter-spacing:0.5px;">${a.name}</div>
-        <div style="font-size:26px;font-weight:700;color:${a.color};line-height:1;">${cntPerActor[a.id]}</div>
-        <div style="font-size:12px;font-weight:500;color:${a.color};opacity:0.65;line-height:1.5;">/${totalPerActor[a.id]}회</div>
-      </div>`;
-    }).join('');
+  function runCapture() {
+    html2canvas(captureEl, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: '#0d1535',
+      logging: false,
+    }).then(canvas => {
+      const link = document.createElement('a');
+      link.download = '해몽가_정산판.jpg';
+      link.href = canvas.toDataURL('image/jpeg', 0.95);
+      link.click();
+    }).catch(err => {
+      console.error(err);
+    });
   }
 
-  const roleDiv = (role) => `
-  <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin:16px 0 10px;">
-    <div style="flex:0 0 20%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.6));"></div>
-    <span style="font-size:11px;font-weight:800;color:#c9a84c;letter-spacing:3px;font-family:'Noto Serif KR',serif;">${role}</span>
-    <div style="flex:0 0 20%;height:1px;background:linear-gradient(270deg,transparent,rgba(201,168,76,0.6));"></div>
-  </div>`;
-
-  const html = `<!DOCTYPE html>
-<html><head>
-<meta charset="UTF-8">
-<title>해몽가 정산판</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Noto Sans KR',sans-serif;
-  background:linear-gradient(180deg,#0d1535 0%,#111e45 40%,#0e1840 80%,#0a1230 100%);
-  background-color:#0d1535;
-  padding:16px;width:480px;min-height:100vh;}
-.seat-row{display:flex;align-items:center;margin-bottom:1px;}
-.row-label{font-size:7px;font-weight:700;color:rgba(201,168,76,0.7);text-align:center;flex-shrink:0;}
-.seat{border-radius:2px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(255,255,255,0.10);color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.12);}
-.seat.mk1{background:#ff6b9d!important;color:white!important;border-color:#c0004a!important;}
-.seat.mk2{background:#6b9dff!important;color:white!important;border-color:#003acc!important;}
-.seat.mk3{background:#ffa040!important;color:white!important;border-color:#c05000!important;}
-.seat.mk4{background:#a040ff!important;color:white!important;border-color:#6000c0!important;}
-.seat.mk5{background:#40c060!important;color:white!important;border-color:#006020!important;}
-.seat-ph{flex-shrink:0;}
-.floor-label{font-size:8px;font-weight:700;color:rgba(201,168,76,0.7);padding:3px 0;}
-.floor-divider{border:none;border-top:1px dashed rgba(201,168,76,0.2);margin:3px 0;}
-.seat-legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;font-size:10px;color:#d8d0c0;}
-.seat-legend-item{display:flex;align-items:center;gap:3px;}
-.seat-legend-dot{width:10px;height:10px;border-radius:2px;display:inline-block;}
-@media print{
-  body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  if (typeof html2canvas === 'function') {
+    runCapture();
+  } else {
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    script.onload = runCapture;
+    script.onerror = function() {
+      document.body.removeChild(wrapper);
+      alert('이미지 저장 라이브러리를 불러오지 못했습니다.');
+    };
+    document.head.appendChild(script);
+  }
 }
-</style>
-</head><body>
-<div style="position:relative;background:linear-gradient(135deg,transparent 30%,rgba(201,168,76,0.06) 50%,transparent 70%),linear-gradient(180deg,#0d1535 0%,#111e45 40%,#0e1840 80%,#0a1230 100%);border:1px solid rgba(201,168,76,0.3);border-radius:16px;padding:20px 14px 18px;overflow:hidden;">
-  <div style="position:absolute;left:8px;right:8px;top:8px;bottom:8px;border:1px solid rgba(201,168,76,0.18);border-radius:10px;pointer-events:none;"></div>
-  <div style="text-align:center;position:relative;z-index:1;margin-bottom:12px;">
-    <div style="font-size:9px;font-weight:800;letter-spacing:6px;color:#c9a84c;margin-bottom:2px;">MUSICAL</div>
-    <div style="font-family:'Noto Serif KR',serif;font-weight:700;font-size:28px;color:#e8d08a;letter-spacing:6px;text-shadow:0 2px 14px rgba(201,168,76,0.4);margin-bottom:4px;">해몽가</div>
-    <div style="font-size:10px;font-weight:700;color:#c9a84c;letter-spacing:2px;font-family:'Noto Serif KR',serif;">✦ 2026 관극 정산 ✦</div>
-  </div>
-
-  <div style="position:relative;z-index:1;">
-    ${roleDiv('유견')}
-    <div style="display:flex;gap:5px;">${actorCards('유견')}</div>
-    ${roleDiv('이산')}
-    <div style="display:flex;gap:5px;">${actorCards('이산')}</div>
-
-    <div style="display:flex;justify-content:center;margin:16px 0 6px;">
-      <div style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.4);border-radius:14px;padding:10px 36px;text-align:center;">
-        <div style="font-size:10px;font-weight:700;color:#c9a84c;margin-bottom:3px;letter-spacing:3px;font-family:'Noto Serif KR',serif;">T O T A L</div>
-        <div style="font-size:36px;font-weight:700;color:#c9a84c;line-height:1;">${totalViewed}</div>
-        <div style="font-size:11px;color:#8090a0;margin-top:2px;">/ ${filteredSids.length}회</div>
-      </div>
-    </div>
-    <div style="font-size:9px;font-weight:700;letter-spacing:5px;color:rgba(201,168,76,0.5);text-align:center;margin-top:4px;font-family:'Noto Sans KR',sans-serif;">MUSICAL 해몽가 · 2026</div>
-  </div>
-</div>
-
-<div style="margin-top:10px;background:rgba(8,14,60,0.6);border:1px solid rgba(201,168,76,0.2);border-radius:14px;padding:12px 8px;">
-  <div style="text-align:center;font-size:13px;font-weight:700;color:#c9a84c;margin-bottom:8px;">🏮 내 좌석 현황</div>
-  <div style="background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:5px;text-align:center;font-size:10px;font-weight:700;color:#c9a84c;padding:4px;letter-spacing:4px;margin-bottom:6px;">무 대</div>
-  <div>${seatMapHTML}</div>
-  ${legendHTML}
-</div>
-
-\x3cscript>
-window.addEventListener('load', function(){
-  setTimeout(function(){ window.print(); }, 1000);
-});
-\x3c/script>
-</body></html>`;
-
-  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
-  const url  = URL.createObjectURL(blob);
-  window.open(url, '_blank', 'width=520,height=950');
-  setTimeout(() => URL.revokeObjectURL(url), 30000);
-}
-
 // ── 입력 이벤트 ──
 document.querySelectorAll('.seat-input').forEach(inp => {
   inp.addEventListener('focus', () => { focusedId = inp.id.replace('inp-', ''); });
