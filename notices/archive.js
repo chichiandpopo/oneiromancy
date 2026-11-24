@@ -51,7 +51,7 @@ function render(){
   var list=items.filter(function(x){return cat==='전체'||kind(x)===cat}).filter(function(x){var t=(x.text||'').toLowerCase();return words.every(function(w){return t.indexOf(w)>=0})});
   root.querySelector('.np-count').textContent=list.length?list.length+'건':'';
   var html='';lbList=[];
-  if(cat==='사진'||cat==='포스터'){list.forEach(function(x){(x.media||[]).forEach(function(m){lbList.push([m,x.id]);html+=ph(x,m,capOf(x))})});html=html?'<div class="np-grid">'+html+'</div>':''}
+  if(cat==='사진'||cat==='포스터'){list.forEach(function(x){(x.media||[]).forEach(function(m){lbList.push([m,x.id]);html+='<div class="np-tile">'+ph(x,m,capOf(x))+'<a class="np-go" href="'+esc(tweet(x))+'" target="_blank" rel="noopener" aria-label="원글 보기">원글 ↗</a></div>'})});html=html?'<div class="np-grid">'+html+'</div>':''}
   else{var mo='';list.forEach(function(x){(x.media||[]).forEach(function(m){lbList.push([m,x.id])});var d=kst(x.ts),k=d.getUTCFullYear()+'. '+(d.getUTCMonth()+1);if(k!==mo){html+='<h3 class="np-month">'+k+'</h3>';mo=k}html+=card(x)})}
   root.querySelector('.np-list').innerHTML=html||'<p class="np-empty">'+(q?'검색어와 맞는 글이 없어요.':'이 분류에는 아직 글이 없어요.')+'</p>';
   if(updatedAt){var c=kst(updatedAt);root.querySelector('.np-sub').textContent='X 공식계정 @'+ACC+'에서 모은 글 · 마지막 업데이트 '+(c.getUTCMonth()+1)+'/'+c.getUTCDate()+' '+two(c.getUTCHours())+':'+two(c.getUTCMinutes())}}
@@ -65,9 +65,9 @@ function show(on){document.body.classList.toggle('np-on',on);root.hidden=!on;
 root.innerHTML='<div class="np-sub">X 공식계정 @'+esc(ACC)+'에서 모은 글</div><div class="np-tools"><div class="np-seg" role="group" aria-label="분류"></div><input type="search" placeholder="캐스팅, 티켓, 배우 이름…" aria-label="공지 검색"></div><p class="np-count"></p><div class="np-list"></div><p class="np-note">공식계정 글을 1시간마다 모아요. 사진은 함께 저장돼서 원본 글이 지워져도 남아요.</p>';
 tabs.innerHTML='<button type="button" data-t="main" aria-selected="true">📅 출연 일정 · 정산</button><button type="button" data-t="np" aria-selected="false">📢 공지 아카이브</button>';
 var lb=document.createElement('div');lb.className='np-lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','사진 크게 보기');
-lb.innerHTML='<img alt=""><div><button type="button" data-a="prev">이전</button><a target="_blank" rel="noopener">원본 열기 ↗</a><button type="button" data-a="next">다음</button><button type="button" data-a="close">닫기</button></div>';
+lb.innerHTML='<img alt=""><div><button type="button" data-a="prev">이전</button><a class="np-lb-tw" target="_blank" rel="noopener">원글 보기 ↗</a><a class="np-lb-or" target="_blank" rel="noopener">원본 사진 ↗</a><button type="button" data-a="next">다음</button><button type="button" data-a="close">닫기</button></div>';
 document.body.appendChild(lb);
-function showLb(){var p=lbList[lbIdx];if(!p)return;var img=lb.querySelector('img');img.onerror=function(){img.onerror=null;img.src=orig(p[0])};img.src=file(p[0]);lb.querySelector('a').href=orig(p[0]);lb.classList.add('on');lb.querySelector('[data-a=close]').focus()}
+function showLb(){var p=lbList[lbIdx];if(!p)return;var img=lb.querySelector('img');img.onerror=function(){img.onerror=null;img.src=orig(p[0])};img.src=file(p[0]);lb.querySelector('.np-lb-or').href=orig(p[0]);lb.querySelector('.np-lb-tw').href='https://x.com/'+ACC+'/status/'+p[1];lb.classList.add('on');lb.querySelector('[data-a=close]').focus()}
 lb.addEventListener('click',function(e){var a=e.target.getAttribute&&e.target.getAttribute('data-a');if(e.target===lb||a==='close')lb.classList.remove('on');else if(a==='prev'){lbIdx=(lbIdx-1+lbList.length)%lbList.length;showLb()}else if(a==='next'){lbIdx=(lbIdx+1)%lbList.length;showLb()}});
 document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft'){lbIdx=(lbIdx-1+lbList.length)%lbList.length;showLb()}if(e.key==='ArrowRight'){lbIdx=(lbIdx+1)%lbList.length;showLb()}});
 tabs.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var on=b.getAttribute('data-t')==='np';show(on);try{history.replaceState(null,'',on?'#notice':location.pathname+location.search)}catch(_){}});

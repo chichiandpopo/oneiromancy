@@ -78,3 +78,6 @@ body.np-on .np-main{display:none!important}
 .np-tabs.np-root[data-np=agatha] button[aria-selected=true]{background:transparent;color:#ecd29c;border-bottom-color:#ecd29c}
 .np-tabs.np-root[data-np=othello] button[aria-selected=true]{color:#e2c26b;border-bottom-color:#e2c26b}
 .np-tabs.np-root[data-np=oneiromancy] button[aria-selected=true]{color:#e8c96a;border-bottom-color:#e8c96a}
+#np .np-tile{position:relative;min-width:0}
+#np .np-go{position:absolute;top:6px;right:6px;z-index:2;background:rgba(17,17,17,.68);color:#fff;font:700 11px 'Noto Sans KR',sans-serif;border-radius:999px;padding:4px 9px;text-decoration:none;line-height:1.2;backdrop-filter:blur(2px)}
+#np .np-go:hover{background:rgba(17,17,17,.85)}
