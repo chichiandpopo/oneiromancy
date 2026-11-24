@@ -26,7 +26,7 @@ function isDisc(x){if(x.cat==='MD')return false;var t=x.text||'',ti=titleOf(t);
   if(DISC.test(ti))return true;
   if(/티켓 ?오픈|캐스팅|스케줄|변경|하차|취소|이벤트/.test(ti))return false;
   return x.cat!=='사진·영상'&&/타임세일|타임 ?티켓|특가|할인율|비지정석|넵프라이즈/.test(t.slice(0,400))}
-function isPoster(x){if(x.poster)return true;if(x.cat==='MD')return false;var h=head(x,160);try{h=h.normalize('NFKC')}catch(e){}return /포스터|POSTER/i.test(h)||(/프로필|PROFILE|컨셉|CONCEPT|캐릭터 ?(컷|이미지|사진)/i.test(h)&&!/촬영 현장|비하인드|프로필북|영상|인터뷰|스케치|메이킹|촬영기|VIDEO|FILM|SKETCH|BEHIND|MAKING|INTERVIEW/i.test(h))}
+function isPoster(x){if(x.poster)return true;if(x.cat==='MD')return false;var h=head(x,160);try{h=h.normalize('NFKC')}catch(e){}return /포스터|POSTER/i.test(h)||(/프로필|PROFILE|컨셉|CONCEPT|캐릭터 ?(컷|이미지|사진)/i.test(h)&&!/촬영 현장|비하인드|프로필북|영상|인터뷰|스케치|메이킹|촬영기|VIDEO|FILM|SKETCH|BEHIND|MAKING|INTERVIEW|증정|이벤트|EVENT|엽서|응모|추첨|굿즈|판매/i.test(h))}
 function kind(x){if(!isDisc(x)&&!isPoster(x)&&x.cat==='티켓'&&/이벤트/.test(titleOf(x.text||'')))return '이벤트';return isDisc(x)?'할인':isPoster(x)?'포스터':x.cat==='사진·영상'?(isVid(x)?'영상':'사진'):(x.cat==='티켓'||x.cat==='캐스팅·일정')?'일정':x.cat==='MD'?'MD':'이벤트'}
 var KINDS=['전체','일정','이벤트','할인','포스터','사진','영상','MD'];
 function file(m){return BASE+'img/'+m.replace(/[^A-Za-z0-9_-]/g,'_')+'.webp'}
