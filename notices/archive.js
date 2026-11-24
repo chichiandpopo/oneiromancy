@@ -19,9 +19,15 @@ function catOf(t){var h=t.slice(0,80);
   if(/이벤트|위크|WEEK|커튼콜|적립|증정|사인회|관객과의 대화|무대 인사|매진 공약|당첨|살롱|라이브|사전 질문|객석|가사지|증표|넘버리스트|카카오톡|카페|디자인 티켓/.test(h))return'이벤트·안내';
   return'사진·영상'}
 function isVid(x){return x.cat==='사진·영상'&&(!!x.video||/youtu\.?be|buly\.kr/.test(x.text||''))}
-function isDisc(x){return x.cat!=='사진·영상'&&x.cat!=='MD'&&!/재관람/.test(head(x,80))&&/할인|타임세일|프로모션|특가|toping/.test(head(x,120))}
+function titleOf(t){return t.split('\n').map(function(l){return l.trim()}).filter(function(l){return l&&!/^\[[^\]]*\]$|^(뮤지컬|연극) #\S+$|^(뮤지컬|연극) \[[^\]]*\]$|^𝖒𝖚𝖘𝖎𝖈𝖆𝖑|^musical\b/i.test(l)}).slice(0,2).join(' ')}
+var DISC=/할인|타임세일|타임 ?티켓|프로모션|특가|토핑|toping|넵프라이즈|비지정석|할인율|반값|(VIP|R|S|A|전)석[^\n]{0,12}\d{1,2} ?%|석 ?\d{1,3}(,\d{3}| ?만) ?원/i;
+function isDisc(x){if(x.cat==='MD')return false;var t=x.text||'',ti=titleOf(t);
+  if(/재관람|적립/.test(ti)&&!/타임세일|특가|할인율/.test(ti))return false;
+  if(DISC.test(ti))return true;
+  if(/티켓 ?오픈|캐스팅|스케줄|변경|하차|취소|이벤트/.test(ti))return false;
+  return x.cat!=='사진·영상'&&/타임세일|타임 ?티켓|특가|할인율|비지정석|넵프라이즈/.test(t.slice(0,400))}
 function isPoster(x){return !!x.poster||/포스터|POSTER/i.test(head(x,100))}
-function kind(x){return isDisc(x)?'할인':isPoster(x)?'포스터':x.cat==='사진·영상'?(isVid(x)?'영상':'사진'):(x.cat==='티켓'||x.cat==='캐스팅·일정')?'일정':x.cat==='MD'?'MD':'이벤트'}
+function kind(x){if(!isDisc(x)&&!isPoster(x)&&x.cat==='티켓'&&/이벤트/.test(titleOf(x.text||'')))return '이벤트';return isDisc(x)?'할인':isPoster(x)?'포스터':x.cat==='사진·영상'?(isVid(x)?'영상':'사진'):(x.cat==='티켓'||x.cat==='캐스팅·일정')?'일정':x.cat==='MD'?'MD':'이벤트'}
 var KINDS=['전체','일정','이벤트','할인','포스터','사진','영상','MD'];
 function file(m){return BASE+'img/'+m.replace(/[^A-Za-z0-9_-]/g,'_')+'.webp'}
 function orig(m){return m.indexOf('/')>=0?'https://pbs.twimg.com/'+m:'https://pbs.twimg.com/media/'+m+'?format=jpg&name=orig'}
