@@ -68,3 +68,13 @@ body.np-on .np-main{display:none!important}
 .np-root[data-np=billy]{--np-ink:#111;--np-soft:#777;--np-ac:#d42b2b;--np-on:#fff;--np-gold:#d42b2b;--np-card:#fff;--np-line:rgba(17,17,17,.14);--np-seg:#fff;--np-fH:'Anton','Noto Sans KR',sans-serif}
 .np-root[data-np=billy] .np-head,.np-root[data-np=billy] .np-month{letter-spacing:2px}
 .np-root[data-np=oneiromancy].np-pad,.np-root[data-np=hymn].np-pad,.np-root[data-np=billy].np-pad{max-width:720px;margin:0 auto 14px}
+/* 탭: 위쪽 링크 버튼과 구분되는 밑줄 탭 */
+.np-tabs{gap:0;max-width:720px;margin:22px auto 16px;padding:0 10px;border-bottom:1.5px solid var(--np-line);flex-wrap:nowrap}
+.np-tabs button,.np-tabs.np-root button{flex:1 1 0;max-width:none;border:none;border-bottom:3px solid transparent;margin-bottom:-1.5px;background:transparent;border-radius:0;padding:10px 6px 9px;font:800 15px 'Noto Sans KR',sans-serif;letter-spacing:.5px;color:var(--np-ink);opacity:.5;min-height:46px;box-shadow:none}
+.np-tabs button[aria-selected=true],.np-tabs.np-root button[aria-selected=true]{background:transparent;color:var(--np-ink);opacity:1;border-bottom-color:var(--np-ac)}
+.np-tabs button:hover{opacity:.8}
+.np-tabs.np-root[data-np=agatha]{border-bottom-color:rgba(236,210,156,.45)}
+.np-tabs.np-root[data-np=agatha] button{background:transparent;border-color:transparent;color:#f5e3ba}
+.np-tabs.np-root[data-np=agatha] button[aria-selected=true]{background:transparent;color:#ecd29c;border-bottom-color:#ecd29c}
+.np-tabs.np-root[data-np=othello] button[aria-selected=true]{color:#e2c26b;border-bottom-color:#e2c26b}
+.np-tabs.np-root[data-np=oneiromancy] button[aria-selected=true]{color:#e8c96a;border-bottom-color:#e8c96a}

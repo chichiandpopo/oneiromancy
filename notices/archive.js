@@ -62,8 +62,8 @@ function load(){if(loaded||loading)return;loading=true;render();
 function show(on){document.body.classList.toggle('np-on',on);root.hidden=!on;
   [].forEach.call(tabs.querySelectorAll('button'),function(b){b.setAttribute('aria-selected',String((b.getAttribute('data-t')==='np')===on))});
   if(on)load()}
-root.innerHTML='<div class="np-head">공지 아카이브</div><div class="np-sub">X 공식계정 @'+esc(ACC)+'에서 모은 글</div><div class="np-tools"><div class="np-seg" role="group" aria-label="분류"></div><input type="search" placeholder="캐스팅, 티켓, 배우 이름…" aria-label="공지 검색"></div><p class="np-count"></p><div class="np-list"></div><p class="np-note">공식계정 글을 1시간마다 모아요. 사진은 함께 저장돼서 원본 글이 지워져도 남아요.</p>';
-tabs.innerHTML='<button type="button" data-t="main" aria-selected="true">출연 일정 · 정산</button><button type="button" data-t="np" aria-selected="false">📢 공지 아카이브</button>';
+root.innerHTML='<div class="np-sub">X 공식계정 @'+esc(ACC)+'에서 모은 글</div><div class="np-tools"><div class="np-seg" role="group" aria-label="분류"></div><input type="search" placeholder="캐스팅, 티켓, 배우 이름…" aria-label="공지 검색"></div><p class="np-count"></p><div class="np-list"></div><p class="np-note">공식계정 글을 1시간마다 모아요. 사진은 함께 저장돼서 원본 글이 지워져도 남아요.</p>';
+tabs.innerHTML='<button type="button" data-t="main" aria-selected="true">📅 출연 일정 · 정산</button><button type="button" data-t="np" aria-selected="false">📢 공지 아카이브</button>';
 var lb=document.createElement('div');lb.className='np-lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','사진 크게 보기');
 lb.innerHTML='<img alt=""><div><button type="button" data-a="prev">이전</button><a target="_blank" rel="noopener">원본 열기 ↗</a><button type="button" data-a="next">다음</button><button type="button" data-a="close">닫기</button></div>';
 document.body.appendChild(lb);
