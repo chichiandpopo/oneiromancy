@@ -20,7 +20,7 @@ function catOf(t){var h=t.slice(0,80);
   return'사진·영상'}
 function isVid(x){return x.cat==='사진·영상'&&(!!x.video||/youtu\.?be|buly\.kr/.test(x.text||''))}
 function titleOf(t){return t.split('\n').map(function(l){return l.trim()}).filter(function(l){return l&&!/^\[[^\]]*\]$|^(뮤지컬|연극) #\S+$|^(뮤지컬|연극) \[[^\]]*\]$|^𝖒𝖚𝖘𝖎𝖈𝖆𝖑|^musical\b/i.test(l)}).slice(0,2).join(' ')}
-var DISC=/할인|타임세일|타임 ?티켓|프로모션|특가|토핑|toping|넵프라이즈|비지정석|할인율|반값|(VIP|R|S|A|전)석[^\n]{0,12}\d{1,2} ?%|석 ?\d{1,3}(,\d{3}| ?만) ?원/i;
+var DISC=/할인|쿠폰|타임세일|타임 ?티켓|프로모션|특가|토핑|toping|넵프라이즈|비지정석|할인율|반값|(VIP|R|S|A|전)석[^\n]{0,12}\d{1,2} ?%|석 ?\d{1,3}(,\d{3}| ?만) ?원/i;
 function isDisc(x){if(x.cat==='MD')return false;var t=x.text||'',ti=titleOf(t);
   if(/재관람|적립/.test(ti)&&!/타임세일|특가|할인율/.test(ti))return false;
   if(DISC.test(ti))return true;
