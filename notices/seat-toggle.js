@@ -4,11 +4,11 @@
   var st=document.createElement('style');
   st.textContent='html.np-seat-off .np-seat-t{display:none!important}'+
     '.np-seat-sw{display:flex;justify-content:center;margin:0 auto 12px;max-width:720px;padding:0 10px}'+
-    '.np-seat-sw button{display:inline-flex;align-items:center;gap:8px;background:transparent;color:inherit;border:1.5px solid currentColor;border-radius:999px;padding:6px 14px 6px 8px;font:700 12.5px "Noto Sans KR",sans-serif;cursor:pointer;opacity:.85;min-height:36px}'+
+    '.np-seat-sw button{display:inline-flex;align-items:center;gap:9px;background:transparent;color:inherit;border:1px solid currentColor;border-radius:999px;padding:5px 13px 5px 10px;font:700 11.5px "Noto Sans KR",sans-serif;cursor:pointer;opacity:.8;min-height:32px}'+
     '.np-seat-sw button:hover{opacity:1}'+
-    '.np-seat-sw i{position:relative;width:34px;height:20px;border-radius:999px;background:currentColor;opacity:.9;flex:none}'+
-    '.np-seat-sw i::after{content:"";position:absolute;top:3px;left:17px;width:14px;height:14px;border-radius:50%;background:#fff;transition:left .15s}'+
-    'html.np-seat-off .np-seat-sw i{opacity:.3}html.np-seat-off .np-seat-sw i::after{left:3px}';
+    '.np-seat-sw i{position:relative;width:24px;height:14px;border-radius:999px;background:currentColor;opacity:.85;flex:none}'+
+    '.np-seat-sw i::after{content:"";position:absolute;top:2px;left:12px;width:10px;height:10px;border-radius:50%;background:#fff;transition:left .15s}'+
+    'html.np-seat-off .np-seat-sw i{opacity:.3}html.np-seat-off .np-seat-sw i::after{left:2px}';
   document.head.appendChild(st);
   function off(){try{return localStorage.getItem(KEY)==='1'}catch(e){return false}}
   function targets(){
