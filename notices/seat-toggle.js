@@ -3,7 +3,7 @@
   var KEY='np-seatmap-off';
   var st=document.createElement('style');
   st.textContent='html.np-seat-off .np-seat-t{display:none!important}'+
-    '.np-seat-sw{display:flex;justify-content:center;margin:0 auto 12px;max-width:720px;padding:0 10px}'+
+    '.np-seat-sw{display:flex;justify-content:center;margin:16px auto;max-width:720px;padding:0 10px}'+
     '.np-seat-sw button{display:inline-flex;align-items:center;gap:9px;background:transparent;color:inherit;border:1px solid currentColor;border-radius:999px;padding:5px 13px 5px 10px;font:700 11.5px "Noto Sans KR",sans-serif;cursor:pointer;opacity:.8;min-height:32px}'+
     '.np-seat-sw button:hover{opacity:1}'+
     '.np-seat-sw i{position:relative;width:24px;height:14px;border-radius:999px;background:currentColor;opacity:.85;flex:none}'+
@@ -24,7 +24,11 @@
     var box=document.createElement('div');box.className='np-seat-sw';
     box.innerHTML='<button type="button" aria-pressed="true"><i aria-hidden="true"></i><span>정산판에 좌석표 같이 보기</span></button>';
     cap.parentNode.insertBefore(box,cap);
-    try{var ref=document.querySelector('#np-tabs button[aria-selected=true]');if(ref)box.style.color=getComputedStyle(ref).color}catch(e){}
+    function lum(c){var m=String(c).match(/rgba?\(([\d.]+)[ ,]+([\d.]+)[ ,]+([\d.]+)(?:[ ,/]+([\d.]+))?/);if(!m)return null;if(m[4]!==undefined&&+m[4]<.4)return null;return (0.299*m[1]+0.587*m[2]+0.114*m[3])/255}
+    function paint(){try{var ref=document.querySelector('#np-tabs button[aria-selected=true]');if(ref){box.style.color=getComputedStyle(ref).color;return}
+      for(var e=box.parentElement;e;e=e.parentElement){var cs=getComputedStyle(e),L=lum(cs.backgroundColor);if(L===null){var g=(cs.backgroundImage||'').match(/rgba?\([^)]+\)/);if(g)L=lum(g[0])}
+        if(L!==null){box.style.color=L<.45?'#f1e2bf':'';return}}}catch(_){}}
+    paint();setTimeout(paint,600);setTimeout(paint,2000);
     var b=box.querySelector('button');
     function set(o){document.documentElement.classList.toggle('np-seat-off',o);b.setAttribute('aria-pressed',String(!o));
       b.querySelector('span').textContent=o?'좌석표 숨김 · 카운팅만 보기':'정산판에 좌석표 같이 보기';}
