@@ -1,0 +1,70 @@
+/* 공지 아카이브 탭 — 정산판에 붙는 부품. 공연별 색은 아래 [data-np] 블록 */
+.np-root{--np-ink:#2c2015;--np-soft:#7a6a48;--np-ac:#7a1220;--np-on:#f6e3b0;--np-gold:#c9a227;--np-card:rgba(255,251,240,.88);--np-line:rgba(110,15,22,.3);--np-seg:rgba(255,251,240,.6);--np-fH:'Song Myung',serif}
+.np-root[data-np=second-child]{--np-ink:#1d1712;--np-soft:#4a3d2c;--np-ac:#1d1712;--np-on:#f2c230;--np-gold:#8f2a12;--np-card:rgba(255,246,214,.6);--np-line:rgba(29,23,18,.22);--np-seg:rgba(255,246,214,.45);--np-fH:'Libre Caslon Text','Noto Serif KR',serif}
+.np-root[data-np=narziss]{--np-ink:#3b2e2a;--np-soft:#6b5a4c;--np-ac:#4e3550;--np-on:#fff8ea;--np-gold:#a8823e;--np-card:rgba(255,251,240,.82);--np-line:rgba(168,130,62,.35);--np-seg:rgba(255,251,240,.55);--np-fH:'Gowun Batang',serif}
+.np-root[data-np=othello]{--np-ink:#f3ebe1;--np-soft:#c9b8a8;--np-ac:#e2c26b;--np-on:#3a1c1f;--np-gold:#e2c26b;--np-card:rgba(60,32,36,.6);--np-line:rgba(226,194,107,.22);--np-seg:rgba(40,20,24,.45);--np-fH:'Song Myung',serif}
+.np-root[data-np=agatha]{--np-ink:#2b1712;--np-soft:#8a7360;--np-ac:#b0242b;--np-on:#fffaf1;--np-gold:#a8854c;--np-card:#fffaf1;--np-line:#a8854c;--np-seg:rgba(255,250,241,.9);--np-fH:'Gowun Batang',serif}
+body.np-on .content:not(#np){display:none!important}
+#np[hidden]{display:none!important}
+.np-tabs{display:flex;justify-content:center;gap:6px;max-width:720px;margin:0 auto 14px;padding:0 10px;flex-wrap:wrap}
+.np-tabs button{flex:1 1 0;max-width:260px;border:1.5px solid var(--np-line);background:var(--np-seg);color:var(--np-ink);border-radius:999px;padding:9px 14px;font:700 14px 'Noto Sans KR',sans-serif;cursor:pointer;min-height:44px}
+.np-tabs button[aria-selected=true]{background:var(--np-ac);border-color:var(--np-ac);color:var(--np-on)}
+.np-tabs button:focus-visible,#np button:focus-visible,#np input:focus-visible,#np a:focus-visible{outline:2px solid var(--np-gold);outline-offset:2px}
+#np{color:var(--np-ink);font-family:'Noto Sans KR',sans-serif;font-size:15px;line-height:1.65;text-align:left}
+#np *{box-sizing:border-box;min-width:0}
+#np .np-head{text-align:center;font-family:var(--np-fH);font-size:19px;letter-spacing:3px;margin:4px 0 2px;color:var(--np-ink)}
+#np .np-sub{text-align:center;font-size:11.5px;color:var(--np-soft);margin-bottom:12px}
+#np .np-tools{display:flex;flex-direction:column;gap:8px;margin-bottom:6px}
+#np .np-seg{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+#np .np-seg button{border:1.5px solid var(--np-line);background:var(--np-seg);color:var(--np-ink);border-radius:999px;padding:6px 12px;font:700 13px 'Noto Sans KR',sans-serif;cursor:pointer;min-height:36px}
+#np .np-seg button b{font-weight:400;opacity:.7;margin-left:4px;font-size:11.5px}
+#np .np-seg button.on{background:var(--np-ac);border-color:var(--np-ac);color:var(--np-on)}
+#np input[type=search]{width:100%;font:16px 'Noto Sans KR',sans-serif;padding:8px 14px;border:1.5px solid var(--np-line);border-radius:12px;background:var(--np-card);color:var(--np-ink);min-height:42px}
+#np input[type=search]::placeholder{color:var(--np-soft)}
+#np .np-count{color:var(--np-soft);font-size:12px;text-align:center;margin:4px 0 0}
+#np .np-month{font-family:var(--np-fH);font-size:17px;text-align:center;letter-spacing:3px;margin:22px 0 10px;color:var(--np-ink);font-weight:700}
+#np .np-month::before,#np .np-month::after{content:"✦";color:var(--np-gold);font-size:9px;margin:0 10px;vertical-align:middle}
+#np .np-n{background:var(--np-card);border:1.5px solid var(--np-line);border-radius:12px;padding:14px;margin-bottom:10px;display:grid;grid-template-columns:58px minmax(0,1fr);gap:12px}
+#np .np-d{text-align:center}
+#np .np-d b{display:block;font:700 20px/1 var(--np-fH);color:var(--np-ac)}
+#np .np-d span{display:block;font-size:11px;color:var(--np-soft);margin-top:5px;white-space:nowrap}
+#np .np-tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;border:1px solid var(--np-line);color:var(--np-soft);margin:0 4px 7px 0}
+#np .np-tag.k{background:var(--np-ac);border-color:var(--np-ac);color:var(--np-on)}
+#np .np-tag.new{border-color:var(--np-gold);color:var(--np-ink)}
+#np .np-txt{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;font-size:14.5px}
+#np .np-txt.clip{max-height:9.8em;overflow:hidden;-webkit-mask-image:linear-gradient(#000 65%,transparent);mask-image:linear-gradient(#000 65%,transparent)}
+#np .np-more{border:0;background:none;color:var(--np-ac);font:700 13px 'Noto Sans KR',sans-serif;padding:6px 0;cursor:pointer;min-height:34px}
+#np .np-strip{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:10px;padding-bottom:4px}
+#np .np-ph{flex:none;scroll-snap-align:start;border:0;padding:0;background:rgba(0,0,0,.08);border-radius:8px;overflow:hidden;cursor:zoom-in;position:relative;height:180px;max-width:100%}
+#np .np-ph img{display:block;height:100%;width:auto;max-width:none}
+#np .np-ph .np-play{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.65);color:#fff;font-size:11px;padding:2px 8px;border-radius:999px}
+#np .np-links{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font-size:13px}
+#np .np-links a{color:var(--np-ac);text-decoration:none;white-space:nowrap;font-weight:600}
+#np .np-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:12px}
+#np .np-grid .np-ph{height:auto;aspect-ratio:4/5;width:100%;border:1.5px solid var(--np-line)}
+#np .np-grid .np-ph img{width:100%;height:100%;object-fit:cover}
+#np .np-cap{position:absolute;left:0;right:0;bottom:0;padding:20px 8px 6px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:11.5px;text-align:left;line-height:1.35}
+#np .np-empty{padding:50px 0;text-align:center;color:var(--np-soft)}
+#np .np-note{color:var(--np-soft);font-size:11.5px;margin-top:22px;text-align:center}
+.np-lb{position:fixed;inset:0;background:rgba(10,10,10,.92);z-index:9999;display:none;flex-direction:column;align-items:center;justify-content:center;padding:16px;gap:12px}
+.np-lb.on{display:flex}
+.np-lb img{max-width:100%;max-height:calc(100vh - 120px);border-radius:8px}
+.np-lb div{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.np-lb button,.np-lb a{background:#fff;color:#151515;border:0;border-radius:999px;padding:10px 18px;font:700 14px 'Noto Sans KR',sans-serif;cursor:pointer;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:560px){#np .np-n{grid-template-columns:1fr;gap:6px}#np .np-d{display:flex;align-items:baseline;gap:8px;text-align:left}#np .np-d span{margin:0}#np .np-ph{height:150px}#np .np-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+body.np-on .np-main{display:none!important}
+#np.np-pad{padding:4px 6px 10px}
+/* 아가사: 와인 바탕 위 글씨는 밝게, 카드는 크림 종이 */
+.np-root[data-np=agatha] .np-head,.np-root[data-np=agatha] .np-month,.np-root[data-np=agatha] .np-count,.np-root[data-np=agatha] .np-sub,.np-root[data-np=agatha] .np-note,.np-root[data-np=agatha] .np-empty{color:#f5e3ba!important}
+.np-root[data-np=agatha] .np-seg button,.np-tabs.np-root[data-np=agatha] button{background:rgba(54,9,12,.45);border-color:rgba(236,210,156,.45);color:#f5e3ba}
+.np-root[data-np=agatha] .np-seg button.on,.np-tabs.np-root[data-np=agatha] button[aria-selected=true]{background:#ecd29c;border-color:#ecd29c;color:#4d1013}
+.np-root[data-np=agatha] .np-n{box-shadow:0 0 0 1px #a8854c,0 6px 18px rgba(0,0,0,.35);border-color:transparent}
+.np-root[data-np=othello] .np-n{backdrop-filter:blur(2px)}
+#np[data-np=agatha] .np-seg button{background:rgba(54,9,12,.45);border-color:rgba(236,210,156,.45);color:#f5e3ba}
+#np[data-np=agatha] .np-seg button.on{background:#ecd29c;border-color:#ecd29c;color:#4d1013}
+.np-root[data-np=oneiromancy]{--np-ink:#f0eadc;--np-soft:#b9b2a2;--np-ac:#c9a84c;--np-on:#0a0f2e;--np-gold:#e8c96a;--np-card:rgba(8,14,45,.65);--np-line:rgba(201,168,76,.3);--np-seg:rgba(8,14,45,.5);--np-fH:'Noto Serif KR',serif}
+.np-root[data-np=hymn]{--np-ink:#1a3a35;--np-soft:#4a7a70;--np-ac:#1a5a4a;--np-on:#fff;--np-gold:#f59e0b;--np-card:rgba(255,255,255,.78);--np-line:rgba(26,90,74,.25);--np-seg:rgba(255,255,255,.6);--np-fH:'Noto Sans KR',sans-serif}
+.np-root[data-np=gone-tomorrow]{--np-ink:#2a2420;--np-soft:#6b6358;--np-ac:#8f1f2c;--np-on:#fff;--np-gold:#b58b5a;--np-card:rgba(255,255,255,.78);--np-line:rgba(143,31,44,.3);--np-seg:rgba(255,255,255,.6);--np-fH:'Song Myung',serif}
+.np-root[data-np=billy]{--np-ink:#111;--np-soft:#777;--np-ac:#d42b2b;--np-on:#fff;--np-gold:#d42b2b;--np-card:#fff;--np-line:rgba(17,17,17,.14);--np-seg:#fff;--np-fH:'Anton','Noto Sans KR',sans-serif}
+.np-root[data-np=billy] .np-head,.np-root[data-np=billy] .np-month{letter-spacing:2px}
+.np-root[data-np=oneiromancy].np-pad,.np-root[data-np=hymn].np-pad,.np-root[data-np=billy].np-pad{max-width:720px;margin:0 auto 14px}
