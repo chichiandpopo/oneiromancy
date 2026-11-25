@@ -40,3 +40,51 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+
+/* 아이폰·인앱브라우저 정산판 저장 — 다운로드 대신 이미지 창을 띄워 '사진에 저장'/길게 눌러 저장 */
+(function(){
+  var ua=navigator.userAgent||'';
+  var IOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var INAPP=/KAKAOTALK|Instagram|FBAN|FBAV|NAVER\(inapp|Line\/|DaumApps|everytimeApp/i.test(ua);
+  if(!IOS&&!INAPP)return;
+  var st=document.createElement('style');
+  st.textContent='.np-sv{position:fixed;inset:0;z-index:2147483000;background:#0c0a0a;display:flex;flex-direction:column;align-items:center;padding:14px 12px calc(14px + env(safe-area-inset-bottom));box-sizing:border-box;font-family:"Noto Sans KR",sans-serif;color:#fff}'+
+    '.np-sv p{margin:2px 0 10px;font-size:13px;font-weight:700;text-align:center;line-height:1.5;opacity:.92}'+
+    '.np-sv .np-sv-im{flex:1;min-height:0;width:100%;overflow:auto;-webkit-overflow-scrolling:touch;text-align:center}'+
+    '.np-sv img{max-width:100%;height:auto;-webkit-touch-callout:default;user-select:auto;border-radius:6px}'+
+    '.np-sv .np-sv-b{display:flex;gap:8px;margin-top:12px;width:100%;max-width:420px}'+
+    '.np-sv button{flex:1;min-height:46px;border-radius:12px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff;font:800 14px "Noto Sans KR",sans-serif}'+
+    '.np-sv button.np-sv-main{background:#fff;color:#111;border-color:#fff}';
+  document.head.appendChild(st);
+  function toBlob(url){return fetch(url).then(function(r){return r.blob()})}
+  function show(url,name){
+    var box=document.createElement('div');box.className='np-sv';
+    var canShare=!!(navigator.share&&navigator.canShare);
+    box.innerHTML='<p>'+(canShare?'아래 <b>사진에 저장</b>을 누르거나, ':'')+'이미지를 <b>길게 눌러</b> 사진에 저장해 주세요</p>'+
+      '<div class="np-sv-im"><img alt="정산판 이미지"></div><div class="np-sv-b">'+
+      (canShare?'<button type="button" class="np-sv-main" data-a="share">사진에 저장</button>':'')+
+      '<button type="button" data-a="close">닫기</button></div>';
+    box.querySelector('img').src=url;
+    document.body.appendChild(box);
+    box.addEventListener('click',function(e){var a=e.target.closest('button');if(!a)return;
+      if(a.dataset.a==='close'){box.remove();return}
+      toBlob(url).then(function(b){var f=new File([b],name||'정산판.jpg',{type:b.type||'image/jpeg'});
+        if(navigator.canShare({files:[f]}))return navigator.share({files:[f]});
+        throw new Error('noshare');
+      }).catch(function(err){if(err&&err.name==='AbortError')return;a.textContent='길게 눌러 저장해 주세요'});
+    });
+  }
+  var keep={};
+  var rv=URL.revokeObjectURL;URL.revokeObjectURL=function(u){if(keep[u])return;return rv.apply(URL,arguments)};
+  if(navigator.share){var osh=navigator.share.bind(navigator);
+    navigator.share=function(data){return osh(data).catch(function(e){
+      var f=data&&data.files&&data.files[0];
+      if(e&&e.name==='NotAllowedError'&&f&&/^image\//.test(f.type||'')){var u=URL.createObjectURL(f);keep[u]=1;show(u,f.name);return}
+      throw e;})};}
+  var orig=HTMLAnchorElement.prototype.click;
+  HTMLAnchorElement.prototype.click=function(){
+    var h=this.getAttribute('href')||'',d=this.getAttribute('download');
+    if(d!==null&&(/^data:image\//.test(h)||(/^blob:/.test(h)&&/\.(jpe?g|png|webp)$/i.test(d)))){if(/^blob:/.test(h))keep[h]=1;show(h,d);return}
+    return orig.apply(this,arguments);
+  };
+})();
